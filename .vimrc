@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do': './install.py' } 
 
 call plug#end()
 
