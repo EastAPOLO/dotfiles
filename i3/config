@@ -181,3 +181,12 @@ bar {
 
 # wallpaper
 exec_always feh --bg-scale /home/stefan/Pictures/Wallpapers/Minimal.jpg
+
+# disable window titlebars
+for_window [class="^.*"] border pixel 0
+
+# i3-gaps settings
+gaps inner 18 
+gaps outer 6
+smart_gaps on
+
