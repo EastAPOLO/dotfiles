@@ -8,7 +8,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Return exec --no-startup-id xfce4-terminal 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -67,10 +67,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace variables
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
+set $workspace1 "1 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4 "
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
@@ -147,7 +147,8 @@ client.urgent             #2f343f             #2f343f              $text-color  
 # finds out, if available)
 bar {
         status_command i3blocks -c /home/stefan/.config/i3/i3blocks.conf
-        tray_output none 
+        tray_output none
+        font pango:Noto Sans 12 
         colors {
 		        background $bg-color
 	    	    separator #757575
