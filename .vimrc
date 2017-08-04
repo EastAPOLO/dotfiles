@@ -21,3 +21,10 @@ set softtabstop=4
 
 " On pressing tab, insert 4 spaces
 set expandtab
+
+" Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
