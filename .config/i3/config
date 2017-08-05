@@ -103,10 +103,12 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # autostart applications in workspaces defined
-assign [class="Chromium"] $workspace1 
-assign [class="Xfce4-terminal"] $workspace2
-assign [class="Pcmanfm"] $workspace3 
-assign [class="Pavucontrol"] $workspace4 
+assign [class="Chromium"] $workspace1
+exec chromium  
+assign [class="Thunar"] $workspace3
+exec thunar
+assign [class="Pavucontrol"] $workspace4
+exec pavucontrol 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
