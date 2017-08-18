@@ -7,6 +7,9 @@ xterm*boldMode: false
 xterm*colorBDMode: true
 xterm*colorBD: rgb:fc/fc/fc
 
+! Set xterm as login shell
+xterm*loginShell: true
+
 ! Set font rendering
 Xft.antialias: true
 Xft.rgba: rgb
