@@ -1,6 +1,6 @@
 ! Set font name and size
 xterm*faceName: Noto Mono
-xterm*faceSize: 14
+xterm*faceSize: 12
 
 ! Disable bold text and make it look proper
 xterm*boldMode: false
@@ -15,6 +15,11 @@ Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
+
+! Set copy and pasting
+xterm*vt100.translations: #override\n\
+Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
+Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
 
 ! Set TERM variable
 xterm*termName:  xterm-256color
