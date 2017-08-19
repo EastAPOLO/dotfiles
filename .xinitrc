@@ -1,7 +1,7 @@
 # ~/.xinitrc
 
 # Set QT to respect GTK theme
-export QT_STYLE_OVERRIDE='gtk2'
+export QT_QPA_PLATFORMTHEME=gtk2
 
 # Desktop Environment startx options
 #exec gnome-session  # Start Gnome 3
