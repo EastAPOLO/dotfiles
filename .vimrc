@@ -8,6 +8,7 @@ Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do': './install.py' }
 Plug 'vim-airline/vim-airline'
 Plug 'EastAPOLO/vim-forell-apolo'
+Plug 'ap/vim-css-color'
 
 call plug#end()
 

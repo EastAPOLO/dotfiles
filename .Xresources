@@ -2,11 +2,6 @@
 xterm*faceName: Noto Mono
 xterm*faceSize: 12
 
-! Disable bold text and make it look proper
-xterm*boldMode: false
-xterm*colorBDMode: true
-xterm*colorBD: rgb:fc/fc/fc
-
 ! Set xterm as login shell
 xterm*loginShell: true
 
@@ -31,27 +26,34 @@ xterm*saveLines: 4096
 xterm*rightScrollBar: true
 xterm*ScrollBar: true
 
-! Black background and white foreground color
-xterm*foreground: rgb:a8/a8/a8
-xterm*background: rgb:00/00/00
+! Set background and foreground color
+xterm*foreground: #c4c4c4
+xterm*background: #151517
 
-! DOS-box colors
-xterm*color0: rgb:00/00/00
-xterm*color1: rgb:a8/00/00
-xterm*color2: rgb:00/a8/00
-xterm*color3: rgb:a8/54/00
-xterm*color4: rgb:00/00/a8
-xterm*color5: rgb:a8/00/a8
-xterm*color6: rgb:00/a8/a8
-xterm*color7: rgb:a8/a8/a8
-xterm*color8: rgb:54/54/54
-xterm*color9: rgb:fc/54/54
-xterm*color10: rgb:54/fc/54
-xterm*color11: rgb:fc/fc/54
-xterm*color12: rgb:54/54/fc
-xterm*color13: rgb:fc/54/fc
-xterm*color14: rgb:54/fc/fc
-xterm*color15: rgb:fc/fc/fc
+! Forell's colors
+*color0: #151517
+*color8: #1d1d21
+
+*color1: #992525
+*color9: #ca4d4d
+
+*color2: #5e6d36
+*color10: #89a355
+
+*color3: #d27049
+*color11: #e5ab57
+
+*color4: #0a3f6b
+*color12: #2e709a
+
+*color5: #88537b
+*color13: #ba8baf
+
+*color6: #477b7b
+*color14: #76a0a0
+
+*color7: #707880
+*color15: #D3DAE3
 
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
