@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yaourt -S fonts-meta-extended-lt
+yaourt -S fonts-meta-extended-lt ttf-ms-fonts
 
 echo "Symlinking fonts..."
 
