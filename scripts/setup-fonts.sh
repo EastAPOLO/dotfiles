@@ -2,7 +2,7 @@
 
 LOCAL_FONTCONFIG_DIR=~/.config/fontconfig 
 
-sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
+sudo pacman -S ttf-dejavu ttf-liberation noto-fonts ttf-ubuntu-font-family
 yaourt -S ttf-ms-fonts 
 
 echo "Symlinking fonts ..."
