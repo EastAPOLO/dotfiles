@@ -6,10 +6,13 @@ xterm*faceSize: 12
 xterm*loginShell: true
 
 ! Set font rendering
+Xft.dpi: 96
 Xft.antialias: true
-Xft.rgba: rgb
 Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
 Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault 
 
 ! Set copy and pasting
 xterm*vt100.translations: #override\n\
@@ -30,28 +33,36 @@ xterm*ScrollBar: true
 xterm*foreground: #c4c4c4
 xterm*background: #151517
 
-! Forell's colors
+! Set colorscheme
+! Black
 *color0: #151517
 *color8: #1d1d21
 
+!Red
 *color1: #992525
 *color9: #ca4d4d
 
+!Green
 *color2: #5e6d36
 *color10: #89a355
 
+!Yellow
 *color3: #d27049
 *color11: #e5ab57
 
+!Blue
 *color4: #0a3f6b
 *color12: #2e709a
 
+!Magenta
 *color5: #88537b
 *color13: #ba8baf
 
+!Cyan
 *color6: #477b7b
 *color14: #76a0a0
 
+!White
 *color7: #707880
 *color15: #D3DAE3
 

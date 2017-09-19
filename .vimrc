@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do': './install.py' }
 Plug 'vim-airline/vim-airline'
-Plug 'EastAPOLO/vim-forell-apolo'
+Plug 'EastAPOLO/vim-apolo'
 Plug 'ap/vim-css-color'
 
 call plug#end()
@@ -36,7 +36,7 @@ nnoremap <right> :bn<CR>
 
 " Set airline theme
 set laststatus=2
-let g:airline_theme = 'forell'
+let g:airline_theme = 'apolo'
 
 " Remove powerline arrows
 let g:airline_left_sep = ''
@@ -50,11 +50,11 @@ let g:airline_section_z = airline#section#create(['%l/%L %c'])
 
 " Set colorscheme
 set termguicolors
-colorscheme forell
+colorscheme apolo 
 
 " Display buffers at the top
 let g:airline#extensions#tabline#enabled = 1
 
-" Enable backspace behavior like on most text editors
+" Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
 
