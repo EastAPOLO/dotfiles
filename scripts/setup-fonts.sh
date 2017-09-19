@@ -33,6 +33,20 @@ cat > "${LOCAL_FONTCONFIG_DIR}/fonts.conf" << "EOF"
         <test qual="any" name="family"><string>monospace</string></test>
         <edit name="family" mode="assign" binding="same"><string>Noto Mono</string></edit>
     </match>
+    <match target="font">
+        <edit name="autohint" mode="assign">
+            <bool>true</bool>
+        </edit>
+        <edit name="hinting" mode="assign">
+            <bool>true</bool>
+        </edit>
+        <edit mode="assign" name="hintstyle">
+            <const>hintslight</const>
+        </edit>
+        <edit mode="assign" name="lcdfilter">
+            <const>lcddefault</const>
+        </edit>
+    </match>
 </fontconfig>
 EOF
 
