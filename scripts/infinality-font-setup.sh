@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacaur -S fonts-meta-extended-lt
+yaourt -S fonts-meta-extended-lt
 
 echo "Symlinking fonts..."
 
