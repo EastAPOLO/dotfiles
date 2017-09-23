@@ -4,11 +4,13 @@ set nocompatible
 " Begin plugin initialization
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do': './install.py' }
+Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'vim-airline/vim-airline'
 Plug 'EastAPOLO/vim-apolo'
 Plug 'ap/vim-css-color'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
