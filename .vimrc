@@ -5,7 +5,6 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'vim-airline/vim-airline'
 Plug 'EastAPOLO/vim-apolo'
 Plug 'ap/vim-css-color'
