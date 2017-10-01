@@ -11,6 +11,7 @@ Plug 'EastAPOLO/vim-apolo'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
