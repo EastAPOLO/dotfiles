@@ -4,6 +4,7 @@ set nocompatible
 " Begin plugin initialization
 call plug#begin('~/.vim/plugged')
 
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --system-boost' }
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'EastAPOLO/vim-apolo'
@@ -59,4 +60,3 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
-
