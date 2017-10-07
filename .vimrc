@@ -34,8 +34,8 @@ set softtabstop=4
 set expandtab
 
 " Move between open buffers
-nnoremap <left> :bp<CR>
-nnoremap <right> :bn<CR>
+noremap <expr> <right> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bn\<cr>" : "\<right>")
+nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bp\<cr>" : "\<left>")
 
 " Set airline theme
 set laststatus=2
