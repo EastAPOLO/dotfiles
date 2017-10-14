@@ -1,13 +1,21 @@
-# ~/.xinitrc
+#!/bin/sh
 
 # Set QT to respect GTK theme
-export QT_QPA_PLATFORMTHEME=gtk2
+export QT_QPA_PLATFORMTHEME="gtk2"
+
+# Source Xresources
+xrdb -merge $HOME/.Xresources 
+
+# Uncomment if DE is kde1
+#export PATH=/opt/kde1/bin:$PATH
+#export LD_LIBRARY_PATH=/opt/qt1/lib:/opt/kde1/lib
 
 # Desktop Environment startx options
-#exec gnome-session  # Start Gnome 3
-#exec startkde       # Start KDE 5
+#exec gnome-session  # Start Gnome 
+#exec startkde       # Start KDE 
 #exec mate-session   # Start Mate
-#exec startxfce4     # Start Xfce4
+#exec startxfce4     # Start Xfce
+#exec startlxqt      # Start LXQT
 #exec startlxde      # Start LXDE
 
 # Window Manager startx options

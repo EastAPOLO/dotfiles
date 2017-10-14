@@ -21,7 +21,7 @@ fi
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Set editor
-export EDITOR=vim
+export EDITOR="vim"
 
 # Disable Google API keys for chromium
 export GOOGLE_API_KEY="no"
@@ -29,6 +29,6 @@ export GOOGLE_DEFAULT_CLIENT_ID="no"
 export GOOGLE_DEFAULT_CLIENT_SECRET="no"
 
 # Set QT to respect GTK theme
-export QT_QPA_PLATFORMTHEME=gtk2
+export QT_QPA_PLATFORMTHEME="gtk2"
 
 # End ~/.bash_profile
