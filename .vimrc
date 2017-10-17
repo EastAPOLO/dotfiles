@@ -4,7 +4,6 @@ set nocompatible
 " Begin plugin initialization
 call plug#begin('~/.vim/plugged')
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --system-boost' }
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'EastAPOLO/vim-apolo'
@@ -61,14 +60,3 @@ let g:airline#extensions#tabline#enabled = 1
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
 
-" Enable C-family semantic completion for YCM
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
-" Disable safe loading check of .ycm_extra_conf.py
-let g:ycm_confirm_extra_conf = 0 
-
-" Enable Rust semantic completion for YCM
-let g:ycm_rust_src_path = '/usr/src/rust/src'
-
-" Enable Python semantic completion for YCM
-let g:ycm_python_binary_path = '/usr/bin/python3'
