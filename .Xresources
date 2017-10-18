@@ -30,8 +30,8 @@ xterm*rightScrollBar: true
 xterm*ScrollBar: true
 
 ! Set background and foreground color
-xterm*foreground: #c4c4c4
-xterm*background: #151517
+xterm*foreground: #D4D4D4
+xterm*background: #263238
 
 ! Set colorscheme
 ! Black
@@ -63,8 +63,8 @@ xterm*background: #151517
 *color14: #76a0a0
 
 !White
-*color7: #707880
-*color15: #D3DAE3
+*color7: #C4C4C4
+*color15: #D4D4D4
 
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
