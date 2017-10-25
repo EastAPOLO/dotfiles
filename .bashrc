@@ -26,9 +26,11 @@ alias diff='diff --color=auto'
 alias ...='cd ../..'
 
 # Check the weather
-wttr() { curl wttr.in/"$1" }
+wttr(){ 
+    curl wttr.in/"$1" 
+}
 
-# Create and change into a directory
-mkcd() { mkdir -p "$1";cd "$1" }
-
-# End /etc/bashrc
+# Create and change into directory
+mkcd(){ 
+    mkdir -p "$1"; cd "$1" 
+}
