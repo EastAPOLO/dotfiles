@@ -10,7 +10,7 @@
 ESC=$(printf "\e")
 NORMAL="\[$ESC[0m\]"
 RED="\[$ESC[38;5;9m\]"
-BLUE="\[$ESC[38;5;68m\]"
+BLUE="\[$ESC[38;5;4m\]"
 if [[ $EUID == 0 ]] ; then
   PS1="$RED\u [ $NORMAL\w$RED ]# $NORMAL"
 else

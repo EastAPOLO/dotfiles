@@ -14,7 +14,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault 
 
-! Set copy and pasting
+! Support copy and paste
 xterm*vt100.translations: #override\n\
 Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
 Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
@@ -51,8 +51,8 @@ xterm*background: #263238
 *color11:      #e5ab57
 
 !Blue
-*color4:       #0a3f6b
-*color12:      #2e709a
+*color4:       #3893E5
+*color12:      #1F75C1
 
 !Magenta 
 *color5:       #88537b
