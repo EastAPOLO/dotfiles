@@ -66,9 +66,6 @@ set backspace=indent,eol,start
 " Set lines of history vim has to remember
 set history=500
 
-" Highlight search results
-set hlsearch
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
