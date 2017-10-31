@@ -19,9 +19,6 @@ filetype plugin indent on
 " Set line numbers
 set number
 
-" Set relative line numbers
-set relativenumber
-
 " Show existing tab with 4 spaces width
 set tabstop=4
 
@@ -38,7 +35,7 @@ set expandtab
 noremap <expr> <right> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bn\<cr>" : "\<right>")
 nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bp\<cr>" : "\<left>")
 
-" Set colorscheme
+"Set colorscheme
 set termguicolors
 colorscheme base16-default-dark
 
@@ -47,9 +44,6 @@ set backspace=indent,eol,start
 
 " Set lines of history vim has to remember
 set history=500
-
-" Highlight search results
-set hlsearch
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -74,9 +68,8 @@ set cursorline
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
-" Highlight matching [{()}]
-set showmatch
-
-" Search as characters are entered in command mode and highlight matches
+" Search as characters are entered in command mode
 set incsearch
+
+" Highlight search results in command mode
 set hlsearch

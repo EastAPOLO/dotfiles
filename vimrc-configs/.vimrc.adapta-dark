@@ -92,9 +92,8 @@ set cursorline
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
-" Highlight matching [{()}]
-set showmatch
-
-" Search as characters are entered in command mode and highlight matches
+" Search as characters are entered in command mode
 set incsearch
+
+" Highlight search results in command mode
 set hlsearch
