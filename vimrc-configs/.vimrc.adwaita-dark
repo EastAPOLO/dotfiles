@@ -38,7 +38,7 @@ set expandtab
 noremap <expr> <right> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bn\<cr>" : "\<right>")
 nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bp\<cr>" : "\<left>")
 
-"Set colorscheme
+" Set colorscheme
 set termguicolors
 colorscheme base16-default-dark
 
