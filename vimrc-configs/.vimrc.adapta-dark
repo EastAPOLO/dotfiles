@@ -20,6 +20,9 @@ filetype plugin indent on
 " Set line numbers
 set number
 
+" Set relative line numbers
+set relativenumber
+
 " Show existing tab with 4 spaces width
 set tabstop=4
 
@@ -52,7 +55,7 @@ let g:airline_section_z = airline#section#create(['%l/%L %c'])
 
 " Set colorscheme
 set termguicolors
-colorscheme apolo 
+colorscheme apolo
 
 " Display buffers at the top
 let g:airline#extensions#tabline#enabled = 1
@@ -60,3 +63,38 @@ let g:airline#extensions#tabline#enabled = 1
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
 
+" Set lines of history vim has to remember
+set history=500
+
+" Highlight search results
+set hlsearch
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Set Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Enable the autocompletion menu in command mode (wild menu)
+set wildmenu
+
+" Highlight current line
+set cursorline 
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" Highlight matching [{()}]
+set showmatch
+
+" Search as characters are entered in command mode and highlight matches
+set incsearch
+set hlsearch
