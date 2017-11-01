@@ -19,6 +19,9 @@ filetype plugin indent on
 " Set line numbers
 set number
 
+" Set relative line numbers
+set relativenumber
+
 " Show existing tab with 4 spaces width
 set tabstop=4
 
