@@ -8,7 +8,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id xfce4-terminal 
+bindsym $mod+Return exec --no-startup-id mate-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -71,12 +71,12 @@ set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3 "
 set $workspace4 "4 "
-set $workspace5 "5"
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
-set $workspace10 "10"
+set $workspace5 "5 "
+set $workspace6 "6 "
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
+set $workspace10 "10 "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -105,7 +105,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # autostart applications in workspaces defined
 assign [class="Chromium"] $workspace1
 exec chromium  
-assign [class="Thunar"] $workspace3
+assign [class="Caja"] $workspace3
 exec thunar
 assign [class="Pavucontrol"] $workspace4
 exec pavucontrol 
@@ -154,19 +154,7 @@ client.urgent             #2f343f             #2f343f              $text-color  
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3blocks -c /home/stefan/.config/i3/i3blocks.conf
-    tray_output none
-    font pango: Noto Sans 12
-    position    top
-    workspace_buttons   yes 
-    colors {
-		    background $bg-color
-	    	separator #757575
-	        #                   border             background         text
-	        focused_workspace   $bg-color          $bg-color          $text-color
-	        inactive_workspace  $inactive-bg-color $inactive-bg-color $inactive-text-color
-	        urgent_workspace    $urgent-bg-color   $urgent-bg-color   $text-color
-	    }
+    i3bar_command $HOME/.config/i3/polybar.sh
 }
 
 # wallpaper
@@ -180,3 +168,5 @@ gaps inner 18
 gaps outer 6
 smart_gaps on
 
+# launch polybar
+exec_always --no-startup-id ~/.i3/polybar.sh &
