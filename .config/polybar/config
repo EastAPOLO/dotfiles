@@ -33,7 +33,7 @@ border-bottom-size = 2
 border-bottom-color = ${colors.highlight}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
 module-margin-right = 2
@@ -42,7 +42,6 @@ font-0 = FontAwesome:pixelsize=14;0
 font-1 = "Noto Sans:size=12:weight=normal;1"
 
 modules-left = i3
-modules-center = 
 modules-right = cpu eth date
 
 tray-position = right
@@ -236,6 +235,7 @@ time = %I:%M %p
 label =  %time%
 label-background = ${colors.highlight}
 label-foreground = ${colors.foreground}
+
 
 [module/volume]
 type = internal/volume

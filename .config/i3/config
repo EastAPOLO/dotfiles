@@ -2,8 +2,7 @@
 set $mod Mod4
 
 # font for window titles.
-font pango:monospace 8
-
+font pango:monospace 8 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -67,16 +66,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace variables
-set $workspace1 "1 "
+set $workspace1 "1 "
 set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4 "
-set $workspace5 "5 "
-set $workspace6 "6 "
-set $workspace7 "7 "
-set $workspace8 "8 "
-set $workspace9 "9 "
-set $workspace10 "10 "
+set $workspace3 "3 "
+set $workspace4 "4 "
+set $workspace5 "5 "
+set $workspace6 "6 "
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
+set $workspace10 "10 "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -104,11 +103,10 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # autostart applications in workspaces defined
 assign [class="Chromium"] $workspace1
-exec chromium  
-assign [class="Caja"] $workspace3
-exec thunar
-assign [class="Pavucontrol"] $workspace4
-exec pavucontrol 
+exec chromium
+
+assign [class="Pavucontrol"] $workspace3
+exec pavucontrol
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -164,8 +162,8 @@ exec_always feh --bg-scale /home/stefan/Pictures/Wallpapers/Minimal.jpg
 for_window [class="^.*"] border pixel 0
 
 # i3-gaps settings
-gaps inner 18 
-gaps outer 6
+gaps inner 9 
+gaps outer 3
 smart_gaps on
 
 # launch polybar
