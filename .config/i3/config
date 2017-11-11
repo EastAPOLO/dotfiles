@@ -12,7 +12,7 @@ bindsym $mod+Return exec --no-startup-id mate-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi (a program launcher)
+# start rofi (a program launcher) 
 bindsym $mod+d exec rofi -show run
 
 # change focus
@@ -69,7 +69,7 @@ bindsym $mod+a focus parent
 set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3 "
-set $workspace4 "4 "
+set $workspace4 "4 "
 set $workspace5 "5 "
 set $workspace6 "6 "
 set $workspace7 "7 "
@@ -107,6 +107,9 @@ exec chromium
 
 assign [class="Pavucontrol"] $workspace3
 exec pavucontrol
+
+assign [class="Vmware"] $workspace4                                                     
+exec vmware
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -160,11 +163,6 @@ exec_always feh --bg-scale /home/stefan/Pictures/Wallpapers/Minimal.jpg
 
 # disable window titlebars
 for_window [class="^.*"] border pixel 0
-
-# i3-gaps settings
-gaps inner 9 
-gaps outer 3
-smart_gaps on
 
 # launch polybar
 exec_always --no-startup-id ~/.i3/polybar.sh &
