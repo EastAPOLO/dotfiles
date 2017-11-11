@@ -170,5 +170,5 @@ for_window [class="^.*"] border pixel 0
 # launch polybar
 exec_always --no-startup-id ~/.i3/polybar.sh &
 
-# launch lxpolkit
+# launch polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
