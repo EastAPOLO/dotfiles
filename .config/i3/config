@@ -65,6 +65,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# set file dialog windows to fullscreen
+for_window [window_role="GtkFileChooserDialog"] fullscreen enable
+
 # workspace variables
 set $workspace1 "1 "
 set $workspace2 "2 "
@@ -166,3 +169,6 @@ for_window [class="^.*"] border pixel 0
 
 # launch polybar
 exec_always --no-startup-id ~/.i3/polybar.sh &
+
+# launch lxpolkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
