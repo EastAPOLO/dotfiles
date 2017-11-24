@@ -8,26 +8,35 @@ fullscreen = false
 foreground = #D4D4D4
 background = #263238
 
-color0  = #181818
-color8  = #242424
+# Set colorscheme
+#Black
+color0 =       #263238
+color8 =       #222D32
 
-color1  = #992525
-color9  = #ca4d4d
+#Red
+color1 =       #992525
+color9 =       #ca4d4d
 
-color2  = #5e6d36
-color10 = #89a355
+#Green
+color2 =       #5e6d36
+color10 =      #89a355
 
-color3  = #d27049
-color11 = #e5ab57
+#Yellow
+color3 =       #d27049
+color11 =      #e5ab57
 
-color4  = #0a3f6b
-color12 = #2e709a
+#Blue
+color4 =       #3E6DB8
+color12 =      #3784D5
 
-color5  = #88537b
-color13 = #ba8baf
+#Magenta 
+color5 =       #88537b
+color13 =      #ba8baf
 
-color6  = #477b7b
-color14 = #76a0a0
+#Cyan
+color6 =       #477b7b
+color14 =      #76a0a0
 
-color7  = #C4C4C4
-color15 = #D4D4D4
+#White
+color7 =       #A7A7A7
+color15 =      #E4E4E4

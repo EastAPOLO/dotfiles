@@ -1,4 +1,4 @@
-# Begin /etc/bashrc
+# Begin ~/.bashrc
 
 # System wide aliases and functions.
 
@@ -8,16 +8,17 @@
 # go into ~/.bashrc
 
 ESC=$(printf "\e")
-NORMAL="\[$ESC[0m\]"
 RED="\[$ESC[38;5;9m\]"
 BLUE="\[$ESC[38;5;4m\]"
+WHITE="\[$ESC[0m\]"
+
 if [[ $EUID == 0 ]] ; then
-  PS1="$RED\u [ $NORMAL\w$RED ]# $NORMAL"
+  PS1="$RED\u$WHITE:[$WHITE\w$RED]# $WHITE"
 else
-  PS1="$BLUE\u [ $NORMAL\w$BLUE ]\$ $NORMAL"
+  PS1="$BLUE\u$WHITE:$BLUE[$WHITE\w$BLUE]\$ $WHITE"
 fi
 
-unset RED BLUE NORMAL ESC 
+unset RED BLUE WHITE ESC 
 
 # Aliases
 alias ls='ls --color=auto'
@@ -34,3 +35,6 @@ wttr(){
 mkcd(){ 
     mkdir -p "$1"; cd "$1" 
 }
+
+# Turn off bash hash function
+set +h
