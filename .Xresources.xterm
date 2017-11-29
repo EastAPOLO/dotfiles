@@ -9,7 +9,7 @@ xterm*loginShell: true
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
-Xft.rgba: rgb
+Xft.rgba: rgba
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault 
@@ -19,7 +19,7 @@ xterm*vt100.translations: #override\n\
 Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
 Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
 
-! Set TERM variable
+! Set xterm TERM variable
 xterm*termName:  xterm-256color
 
 ! Scrollback
@@ -29,11 +29,10 @@ xterm*saveLines: 4096
 xterm*rightScrollBar: true
 xterm*ScrollBar: true
 
-! Set background and foreground color
-xterm*foreground: #E4E4E4
+! Set colorscheme
+xterm*foreground: #D4D4D4
 xterm*background: #263238 
 
-! Set colorscheme
 !Black
 *color0:       #263238
 *color8:       #222D32
@@ -51,8 +50,8 @@ xterm*background: #263238
 *color11:      #e5ab57
 
 !Blue
-*color4:       #3E6DB8
-*color12:      #3784D5
+*color4:       #3A85E2
+*color12:      #609EEB
 
 !Magenta 
 *color5:       #88537b
@@ -64,7 +63,7 @@ xterm*background: #263238
 
 !White
 *color7:       #B4B4B4
-*color15:      #E4E4E4
+*color15:      #D4D4D4
 
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false

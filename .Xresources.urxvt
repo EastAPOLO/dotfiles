@@ -1,0 +1,69 @@
+! Set font name and size
+URxvt.font: xft:Noto Mono:style=Regular:size=12
+
+! Set urxvt as login shell
+URxvt*loginShell: true
+
+! Set font rendering
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgba
+Xft.autohint: false
+Xft.hintstyle: hintslight
+
+! Set TERM variable
+URxvt*termName: rxvt-unicode-256color
+
+! Scrollback
+URxvt*saveLines: 4096
+
+! Set right hand side scrollbar and color
+URxvt*scrollBar_right: true
+URxvt*scrollBar: true
+URxvt*scrollColor: #5A656A
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! Set colorscheme
+URxvt*foreground: #D4D4D4
+URxvt*background: #263238 
+
+!Black
+*color0:       #263238
+*color8:       #222D32
+
+!Red
+*color1:       #992525
+*color9:       #ca4d4d
+
+!Green
+*color2:       #5e6d36
+*color10:      #89a355
+
+!Yellow
+*color3:       #d27049
+*color11:      #e5ab57
+
+!Blue
+*color4:       #3A85E2
+*color12:      #609EEB
+
+!Magenta 
+*color5:       #88537b
+*color13:      #ba8baf
+
+!Cyan
+*color6:       #477b7b
+*color14:      #76a0a0
+
+!White
+*color7:       #B4B4B4
+*color15:      #D4D4D4
