@@ -8,17 +8,22 @@
 # go into ~/.bashrc
 
 ESC=$(printf "\e")
+NORMAL="\[\e[0m\]"
 RED="\[$ESC[38;5;9m\]"
 BLUE="\[$ESC[38;5;4m\]"
-WHITE="\[$ESC[0m\]"
+WHITE="\[$ESC[38;5;15m\]"
 
-if [[ $EUID == 0 ]] ; then
-  PS1="$RED\u$WHITE:[$WHITE\w$RED]# $WHITE"
-else
-  PS1="$BLUE\u$WHITE:$BLUE[$WHITE\w$BLUE]\$ $WHITE"
+if [[ $EUID == 0 ]] ; then 
+    PS1="$RED\u$WHITE:[$WHITE\w$RED]# $WHITE"
 fi
 
-unset RED BLUE WHITE ESC 
+if [[ $TERM == "linux" ]] ; then
+    PS1="$NORMAL\u [ $NORMAL\w$NORMAL ]\$ $NORMAL"
+else
+    PS1="$WHITE\u$WHITE:$WHITE[$WHITE\w$WHITE]\$ $WHITE"
+fi
+
+unset NORMAL RED BLUE WHITE ESC 
 
 # Aliases
 alias ls='ls --color=auto'
