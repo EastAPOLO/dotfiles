@@ -7,22 +7,26 @@
 # should go into ~/.bash_profile.  Personal aliases and functions should
 # go into ~/.bashrc
 
+# Set colors
 ESC=$(printf "\e")
-NORMAL="\[\e[0m\]"
+NORMAL="\[$ESC[0m\]"
 RED="\[$ESC[38;5;9m\]"
 BLUE="\[$ESC[38;5;4m\]"
 WHITE="\[$ESC[38;5;15m\]"
 
+# Special PS1 prompt when logged in as root
 if [[ $EUID == 0 ]] ; then 
     PS1="$RED\u$WHITE:[$WHITE\w$RED]# $WHITE"
 fi
 
+# Special PS1 promot when using TTY or X.
 if [[ $TERM == "linux" ]] ; then
     PS1="$NORMAL\u$NORMAL:[$NORMAL\w$NORMAL]\$ $NORMAL"
 else
     PS1="$WHITE\u$WHITE:[$WHITE\w$WHITE]\$ $WHITE"
 fi
 
+# Do not keep color variables defined after they are used
 unset NORMAL RED BLUE WHITE ESC 
 
 # Aliases
