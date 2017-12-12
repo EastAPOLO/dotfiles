@@ -18,9 +18,9 @@ if [[ $EUID == 0 ]] ; then
 fi
 
 if [[ $TERM == "linux" ]] ; then
-    PS1="$NORMAL\u [ $NORMAL\w$NORMAL ]\$ $NORMAL"
+    PS1="$NORMAL\u$NORMAL:[$NORMAL\w$NORMAL]\$ $NORMAL"
 else
-    PS1="$WHITE\u$WHITE:$WHITE[$WHITE\w$WHITE]\$ $WHITE"
+    PS1="$WHITE\u$WHITE:[$WHITE\w$WHITE]\$ $WHITE"
 fi
 
 unset NORMAL RED BLUE WHITE ESC 
