@@ -38,7 +38,6 @@ nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 
 set termguicolors
 colorscheme base16-default-dark
 
-
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
 
@@ -80,4 +79,3 @@ if &term =~ '256color'
     " see also http://sunaku.github.io/vim-256color-bce.html
     set t_ut=
 endif
-
