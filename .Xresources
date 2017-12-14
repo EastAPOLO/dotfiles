@@ -1,8 +1,10 @@
 ! Set font name and size
 URxvt.font: xft:Noto Mono:style=Regular:size=12
+xterm*faceName: Noto Mono
+xterm*faceSize: 12
 
-! Set urxvt as login shell
-URxvt*loginShell: true
+! Set term as login shell
+*loginShell: true
 
 ! Set font rendering
 Xft.dpi: 96
@@ -11,20 +13,29 @@ Xft.hinting: true
 Xft.rgba: rgba
 Xft.autohint: false
 Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault 
+
+! Support copy and paste
+xterm*vt100.translations: #override\n\
+Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
+Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
 
 ! Set TERM variable
 URxvt*termName: rxvt-unicode-256color
+xterm*termName: xterm-256color
 
 ! Scrollback
-URxvt*saveLines: 4096
+*saveLines: 4096
 
 ! Set right hand side scrollbar and color
 URxvt*scrollBar_right: true
 URxvt*scrollBar: true
 URxvt*scrollColor: #5A656A
+xterm*rightScrollBar: true
+xterm*ScrollBar: true
 
 ! do not scroll with output
-URxvt*scrollTtyOutput: false
+*scrollTtyOutput: false
 
 ! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
 URxvt*scrollWithBuffer: true
@@ -33,8 +44,8 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 ! Set colorscheme
-URxvt*foreground: #D4D4D4
-URxvt*background: #263238 
+*foreground: #D4D4D4
+*background: #263238 
 
 !Black
 *color0:       #263238
