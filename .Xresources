@@ -15,7 +15,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault 
 
-! Support copy and paste
+! Support copy and paste on xterm
 xterm*vt100.translations: #override\n\
 Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
 Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
@@ -44,12 +44,12 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 ! Set colorscheme
-*foreground: #D4D4D4
-*background: #263238 
+*foreground: #E3E3E3
+*background: #1A1A1A 
 
 !Black
-*color0:       #263238
-*color8:       #222D32
+*color0:       #1A1717
+*color8:       #1A1A1A
 
 !Red
 *color1:       #992525
@@ -64,8 +64,8 @@ URxvt*scrollTtyKeypress: true
 *color11:      #e5ab57
 
 !Blue
-*color4:       #3A85E2
-*color12:      #609EEB
+*color4:       #2D68B3
+*color12:      #3A85E2
 
 !Magenta 
 *color5:       #88537b
@@ -76,5 +76,5 @@ URxvt*scrollTtyKeypress: true
 *color14:      #76a0a0
 
 !White
-*color7:       #B4B4B4
-*color15:      #D4D4D4
+*color7:       #A4A4A4
+*color15:      #E3E3E3
