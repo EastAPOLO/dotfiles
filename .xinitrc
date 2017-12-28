@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Set QT to respect GTK theme
-export QT_QPA_PLATFORMTHEME="gtk2"
-
 # Source Xresources
 xrdb -merge $HOME/.Xresources 
 
