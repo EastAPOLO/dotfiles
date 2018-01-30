@@ -44,12 +44,12 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 ! Set colorscheme
-*foreground: #E3E3E3
-*background: #1A1A1A 
+*foreground: #DADADA
+*background: #1C1C1C
 
 !Black
 *color0:       #1A1717
-*color8:       #1A1A1A
+*color8:       #1C1C1C
 
 !Red
 *color1:       #992525
@@ -77,4 +77,4 @@ URxvt*scrollTtyKeypress: true
 
 !White
 *color7:       #A4A4A4
-*color15:      #E3E3E3
+*color15:      #DADADA
