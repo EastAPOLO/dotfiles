@@ -10,7 +10,7 @@ xterm*faceSize: 12
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
-Xft.rgba: rgba
+Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault 
@@ -43,6 +43,13 @@ URxvt*scrollWithBuffer: true
 ! scroll back to the bottom on keypress
 URxvt*scrollTtyKeypress: true
 
+! Set terminal geometry
+XTerm.vt100.geometry: 85x30
+URxvt.geometry: 85x30
+
+! Set terminal icon
+URxvt.iconFile:  /usr/share/icons/Adwaita/256x256/apps/utilities-terminal.png
+
 ! Set colorscheme
 *foreground: #DADADA
 *background: #1C1C1C
@@ -56,8 +63,8 @@ URxvt*scrollTtyKeypress: true
 *color9:       #ca4d4d
 
 !Green
-*color2:       #5e6d36
-*color10:      #89a355
+*color2:       #47743d
+*color10:      #548b4a
 
 !Yellow
 *color3:       #d27049
