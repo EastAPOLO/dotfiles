@@ -63,15 +63,15 @@ URxvt.iconFile:  /usr/share/icons/Adwaita/256x256/apps/utilities-terminal.png
 *color9:       #ca4d4d
 
 !Green
-*color2:       #47743d
-*color10:      #548b4a
+*color2:       #2C9B43
+*color10:      #36BF52
 
 !Yellow
 *color3:       #d27049
 *color11:      #e5ab57
 
 !Blue
-*color4:       #2D68B3
+*color4:       #0A4B90
 *color12:      #3A85E2
 
 !Magenta 
