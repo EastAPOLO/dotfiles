@@ -7,7 +7,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -69,16 +69,16 @@ bindsym $mod+a focus parent
 for_window [window_role="GtkFileChooserDialog"] fullscreen enable
 
 # workspace variables
-set $workspace1 "1 "
-set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4 "
-set $workspace5 "5 "
-set $workspace6 "6 "
-set $workspace7 "7 "
-set $workspace8 "8 "
-set $workspace9 "9 "
-set $workspace10 "10 "
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -106,7 +106,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # autostart applications in workspaces defined
 assign [class="Firefox"] $workspace1
-exec chromium
+exec firefox
 
 assign [class="Pavucontrol"] $workspace3
 exec pavucontrol

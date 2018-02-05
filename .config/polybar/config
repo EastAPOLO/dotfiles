@@ -8,9 +8,9 @@
 ;=====================================================
 
 [colors]
-background = #222D32
-focused-background = #313E45
-foreground = #D3DAE3
+background = #1A1717
+focused-background = #383838
+foreground = #DADADA
 alert = #bd2c40
 highlight = #3A85E2
 
