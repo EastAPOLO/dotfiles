@@ -7,7 +7,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id xterm
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -106,7 +106,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # autostart applications in workspaces defined
 assign [class="Firefox"] $workspace1
-exec firefox
+exec firefox-nightly
 
 assign [class="Pavucontrol"] $workspace3
 exec pavucontrol
@@ -156,9 +156,6 @@ client.urgent             #2f343f             #2f343f              $text-color  
 bar {
     i3bar_command $HOME/.config/i3/polybar.sh
 }
-
-# wallpaper
-exec_always feh --bg-scale /home/stefan/Pictures/Wallpapers/Minimal.jpg
 
 # disable window titlebars
 for_window [class="^.*"] border pixel 0
