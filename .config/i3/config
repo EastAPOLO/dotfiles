@@ -106,7 +106,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # autostart applications in workspaces defined
 assign [class="Firefox"] $workspace1
-exec firefox-nightly
+exec firefox
 
 assign [class="Pavucontrol"] $workspace3
 exec pavucontrol
