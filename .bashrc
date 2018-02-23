@@ -34,6 +34,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ...='cd ../..'
+alias feh='feh --magick-timeout 1 --auto-rotate --auto-zoom -.'
 
 # Check the weather
 wttr(){ 
@@ -47,3 +48,7 @@ mkcd(){
 
 # Turn off bash hash function
 set +h
+
+# Disable GTK3 CSD
+export GTK_CSD=0
+export LD_PRELOAD="/usr/lib/libgtk3-nocsd.so.0"
