@@ -49,6 +49,3 @@ mkcd(){
 # Turn off bash hash function
 set +h
 
-# Disable GTK3 CSD
-export GTK_CSD=0
-export LD_PRELOAD="/usr/lib/libgtk3-nocsd.so.0"

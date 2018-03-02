@@ -13,12 +13,8 @@ if [ -f "$HOME/.bashrc" ] ; then
   source $HOME/.bashrc
 fi
 
-if [ -d "$HOME/bin" ] ; then
-  pathprepend $HOME/bin
-fi
-
 # Set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
 # Set editor
 export EDITOR="nvim"

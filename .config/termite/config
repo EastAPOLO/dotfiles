@@ -5,13 +5,13 @@ mouse_autohide = false
 fullscreen = false
 
 [colors]
-foreground = #D4D4D4
-background = #263238
+foreground = #DADADA
+background = #1C1C1C
 
 # Set colorscheme
 #Black
-color0 =       #263238
-color8 =       #222D32
+color0 =       #1C1C1C
+color8 =       #1A1717
 
 #Red
 color1 =       #992525
