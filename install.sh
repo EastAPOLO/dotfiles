@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Copy config folders and files to home dir
 if [ -d "$HOME/.config" ]; then
@@ -24,3 +24,13 @@ cp -v ".Xresources" "$HOME/"
 
 # Copy etc config files to /etc
 sudo cp -rv ".config/etc/"* "/etc/"
+
+if [ -f "/usr/bin/apt" ]; then
+    sudo apt update && sudo apt upgrade
+    sudo apt install htop zathura libreoffice synaptic git hexchat fonts-noto
+fi
+
+if [ -f "/usr/bin/pacman" ]; then
+    sudo pacman -Syu
+    sudo pacman -S htop libreoffice i3-wm termite zathura-pdf-mupdf hexchat noto-fonts
+fi

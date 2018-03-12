@@ -162,3 +162,6 @@ for_window [class="^.*"] border pixel 0
 
 # launch polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Set background wallpaper
+exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/troutwp.png
