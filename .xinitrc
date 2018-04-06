@@ -3,6 +3,9 @@
 # Source Xresources
 xrdb -merge $HOME/.Xresources 
 
+# Theme QT applications using gtk2
+export QT_QPA_PLATFORMTHEME="gtk2"
+
 # Uncomment if DE is kde1
 #export PATH=/opt/kde1/bin:$PATH
 #export LD_LIBRARY_PATH=/opt/qt1/lib:/opt/kde1/lib
