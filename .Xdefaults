@@ -1,0 +1,87 @@
+! Set font name and size
+URxvt.font: xft:Noto Mono:style=Regular:size=12
+xterm*faceName: Noto Mono
+xterm*faceSize: 12
+
+! Set term as login shell
+*loginShell: true
+
+! Set font rendering
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault 
+
+! Support copy and paste on xterm
+xterm*vt100.translations: #override\n\
+Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
+Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
+
+! Set TERM variable
+URxvt*termName: rxvt-unicode-256color
+xterm*termName: xterm-256color
+
+! Scrollback
+*saveLines: 4096
+
+! Set right hand side scrollbar and color
+URxvt*scrollBar_right: true
+URxvt*scrollBar: true
+URxvt*scrollColor: #5A656A
+xterm*rightScrollBar: true
+xterm*ScrollBar: true
+
+! do not scroll with output
+*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! Set terminal geometry
+XTerm.vt100.geometry: 85x30
+URxvt.geometry: 85x30
+
+! Set terminal icon
+URxvt.iconFile:  /usr/share/icons/Adwaita/256x256/apps/utilities-terminal.png
+
+! Set colorscheme
+*foreground: #DADADA
+*background: #1C1C1C
+
+!Black
+*color0:       #1A1717
+*color8:       #1C1C1C
+
+!Red
+*color1:       #992525
+*color9:       #ca4d4d
+
+!Green
+*color2:       #2C9B43
+*color10:      #36BF52
+
+!Yellow
+*color3:       #d27049
+*color11:      #e5ab57
+
+!Blue
+*color4:       #0A4B90
+*color12:      #3A85E2
+
+!Magenta 
+*color5:       #88537b
+*color13:      #ba8baf
+
+!Cyan
+*color6:       #477b7b
+*color14:      #76a0a0
+
+!White
+*color7:       #A4A4A4
+*color15:      #DADADA

@@ -36,7 +36,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi vim
-    sudo pacman -S htop libreoffice i3-wm termite zathura-pdf-mupdf hexchat noto-fonts neovim ttf-dejavu ttf-ubuntu-font-family qt5-styleplugins rustup keypassxc
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm termite zathura-pdf-mupdf weechat noto-fonts neovim ttf-dejavu ttf-ubuntu-font-family pcmanfm-gtk3 pulseaudio alsa-utils 
 fi
 
 # Set sane font rendering defaults
