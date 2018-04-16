@@ -81,3 +81,8 @@ if &term =~ '256color'
     set t_ut=
 endif
 
+" Set statusbar
+set laststatus=2
+
+" Show commands being typed
+set showcmd
