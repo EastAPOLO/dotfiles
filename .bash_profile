@@ -24,4 +24,7 @@ export GOOGLE_API_KEY="no"
 export GOOGLE_DEFAULT_CLIENT_ID="no"
 export GOOGLE_DEFAULT_CLIENT_SECRET="no"
 
+# QT5 config
+export QT_QPA_PLATFORMTHEME="gtk2"
+
 # End ~/.bash_profile

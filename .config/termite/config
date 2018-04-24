@@ -1,5 +1,5 @@
 [options]
-font = Noto Mono 12
+font = Noto Sans Mono 12
 cursor_shape = block
 mouse_autohide = false
 fullscreen = false

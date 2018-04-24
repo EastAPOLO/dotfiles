@@ -29,14 +29,14 @@ sudo cp -rv ".config/etc/"* "/etc/"
 if [ -x "$(command -v apt)" ]; then
     sudo apt update && sudo apt upgrade
     sudo apt purge nano vi vim
-    sudo apt install htop zathura libreoffice synaptic git hexchat fonts-noto neovim
+    sudo apt install htop zathura libreoffice synaptic git weechat fonts-noto vim
 fi
 
 # Install my favorite programs if pacman is detected on the system
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
-    sudo pacman -Rsn nano vi vim
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm termite zathura-pdf-mupdf weechat noto-fonts neovim ttf-dejavu ttf-ubuntu-font-family pcmanfm-gtk3 pulseaudio alsa-utils 
+    sudo pacman -Rsn nano vi
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm mate termite zathura-pdf-mupdf weechat noto-fonts gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio alsa-utils 
 fi
 
 # Set sane font rendering defaults
