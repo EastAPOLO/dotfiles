@@ -17,7 +17,7 @@ fi
 PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
 # Set editor
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # Disable Google API keys for chromium
 export GOOGLE_API_KEY="no"
