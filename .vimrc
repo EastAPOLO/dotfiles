@@ -86,3 +86,9 @@ set laststatus=2
 
 " Show commands being typed
 set showcmd
+
+" Set indentation for c languages
+set cinoptions=g0,j1,:0,L0
+
+" Make the default yanking/pasting register the system clipboard
+set clipboard=unnamedplus
