@@ -203,3 +203,5 @@ bar {
 # Set wallpaper
 output HDMI-A-1 bg $HOME/Pictures/Wallpapers/troutwp.png fill
 
+# Remove title bar
+default_border none

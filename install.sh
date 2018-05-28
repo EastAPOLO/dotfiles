@@ -25,6 +25,9 @@ cp -v ".Xresources" "$HOME/"
 # Copy etc config files to /etc
 sudo cp -rv ".config/etc/"* "/etc/"
 
+# Copy local dir to home dir
+cp -r ".local/"* "$HOME/.local/"
+
 # Install my favorite programs if apt is detected on the system
 if [ -x "$(command -v apt)" ]; then
     sudo apt update && sudo apt upgrade
