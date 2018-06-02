@@ -28,6 +28,9 @@ sudo cp -rv ".config/etc/"* "/etc/"
 # Copy local dir to home dir
 cp -r ".local/"* "$HOME/.local/"
 
+# Copy fonts to home dir
+cp -r ".fonts/"* "$HOME/.fonts/"
+
 # Install my favorite programs if apt is detected on the system
 if [ -x "$(command -v apt)" ]; then
     sudo apt update && sudo apt upgrade
@@ -39,7 +42,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm mate termite zathura-pdf-mupdf weechat noto-fonts gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio alsa-utils 
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm caja termite zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi 
 fi
 
 # Set sane font rendering defaults
