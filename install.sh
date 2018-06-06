@@ -42,7 +42,16 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm caja termite zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi 
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 termite zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop
+    if [ -x "$(command -v git)" ]; then
+        cd "$HOME"
+        mkdir sources
+        cd "$HOME/sources"
+        git clone https://aur.archlinux.org/trizen.git
+        cd "$HOME/sources/trizen"
+        makepkg -csi
+    fi
+
 fi
 
 # Set sane font rendering defaults

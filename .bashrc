@@ -35,6 +35,7 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ...='cd ../..'
 alias feh='feh --magick-timeout 1 --auto-rotate --auto-zoom -.'
+alias iotop='sudo iotop'
 
 # Check the weather
 wttr(){ 
