@@ -3,6 +3,9 @@
 # Source Xresources
 xrdb -merge $HOME/.Xresources 
 
+# QT5 settings
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # Uncomment if DE is kde1
 #export PATH=/opt/kde1/bin:$PATH
 #export LD_LIBRARY_PATH=/opt/qt1/lib:/opt/kde1/lib
@@ -16,7 +19,7 @@ xrdb -merge $HOME/.Xresources
 #exec startlxde      # Start LXDE
 
 # Window Manager startx options
-#exec i3             # Start i3
+exec i3             # Start i3
 #exec awesome        # Start Awesome
 #exec openbox        # Start Openbox
 #exec dwm            # Start DWM

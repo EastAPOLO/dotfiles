@@ -25,8 +25,7 @@ cp -v ".Xresources" "$HOME/"
 # Copy etc config files to /etc
 sudo cp -rv ".config/etc/"* "/etc/"
 
-# Copy local dir to home dir
-cp -r ".local/"* "$HOME/.local/"
+# Copy local dir to home dir cp -r ".local/"* "$HOME/.local/"
 
 # Copy fonts to home dir
 cp -r ".fonts/"* "$HOME/.fonts/"
@@ -42,7 +41,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 termite zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 termite zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
         mkdir sources
