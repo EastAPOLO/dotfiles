@@ -38,7 +38,6 @@ nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 
 set termguicolors
 colorscheme base16-default-dark
 
-
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
 
@@ -90,5 +89,15 @@ set showcmd
 " Set indentation for c languages
 set cinoptions=g0,j1,:0,L0
 
-" Make the default yanking/pasting register the system clipboard
+" Set the default yanking/pasting register the system clipboard
 set clipboard=unnamedplus
+
+" Set hybrid line numbers
+:set number relativenumber
+
+" Toggle on and off hybrid line numbers in command and insert mode
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
