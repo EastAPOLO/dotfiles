@@ -25,7 +25,8 @@ cp -v ".Xresources" "$HOME/"
 # Copy etc config files to /etc
 sudo cp -rv ".config/etc/"* "/etc/"
 
-# Copy local dir to home dir cp -r ".local/"* "$HOME/.local/"
+# Copy local dir to home dir 
+cp -r ".local/"* "$HOME/.local/"
 
 # Copy fonts to home dir
 cp -r ".fonts/"* "$HOME/.fonts/"
