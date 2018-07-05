@@ -47,6 +47,10 @@ mkcd(){
     mkdir -p "$1"; cd "$1" 
 }
 
+# Get public ip address
+pubip(){
+    curl -s ipinfo.io/ip
+}
+
 # Turn off bash hash function
 set +h
-
