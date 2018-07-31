@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 qemu-system-x86_64 \
     -m 2G \
