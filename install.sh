@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Copy config folders and files to home dir
 if [ -d "$HOME/.config" ]; then
@@ -42,7 +42,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 termite zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
