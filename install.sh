@@ -42,7 +42,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
@@ -78,4 +78,12 @@ fi
 if [ -f "$HOME/.config/nvim/init.vim" ] && [ -x "$(command -v nvim)" ]; then
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+# Install my favorite theme
+if [ -d "$HOME/sources" ]; then
+    cd "$HOME/sources"
+    git clone "https://gitlab.com/EastAPOLO/Arc-Apolo.git"
+    cd "Arc-Apolo"
+    ./install.sh
 fi
