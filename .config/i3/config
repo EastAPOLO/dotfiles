@@ -7,7 +7,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -104,6 +104,16 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
+# startupid variable
+set $exec_q exec --no-startup-id
+
+# sound
+bindsym $mod+p $exec_q mpc toggle
+bindsym $mod+bracketleft $exec_q mpc prev
+bindsym $mod+bracketright $exec_q mpc next
+bindsym $mod+Shift+bracketleft $exec_q mpc volume -5
+bindsym $mod+Shift+bracketright $exec_q mpc volume +5
+
 # autostart applications in workspaces defined
 assign [class="Firefox"] $workspace1
 exec firefox
@@ -164,4 +174,4 @@ for_window [class="^.*"] border pixel 0
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Set background wallpaper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/troutwp.png
+exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/troutwp.png 
