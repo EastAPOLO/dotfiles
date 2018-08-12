@@ -31,6 +31,9 @@ cp -r ".local/"* "$HOME/.local/"
 # Copy fonts to home dir
 cp -r ".fonts/"* "$HOME/.fonts/"
 
+# Copy scripts to home dir
+cp -r "scripts/"* "$HOME/scripts"
+
 # Install my favorite programs if apt is detected on the system
 if [ -x "$(command -v apt)" ]; then
     sudo apt update && sudo apt upgrade

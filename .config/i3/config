@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # font for window titles.
-font pango:monospace 8 
+font pango:monospace 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -152,7 +152,7 @@ bindsym $mod+r mode "resize"
 set $bg-color 	         #1C1C1C
 set $inactive-bg-color   #1C1C1C
 set $text-color          #DADADA
-set $inactive-text-color #7A7A7A
+set $inactive-text-color #707070
 set $urgent-bg-color     #E53935
 
 # window colors
@@ -174,4 +174,4 @@ for_window [class="^.*"] border pixel 0
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Set background wallpaper
-exec --no-startup-id feh --bg-scale $HOME/pictures/Wallpapers/troutwp.png 
+exec --no-startup-id feh --bg-scale $HOME/pictures/Wallpapers/rocket_wp.png 
