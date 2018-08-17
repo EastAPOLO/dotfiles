@@ -6,9 +6,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'ap/vim-css-color'
-Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'sirver/ultisnips'
+Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost --rust-completer'}
 
 call plug#end()
 
@@ -36,7 +38,7 @@ nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 
 
 "Set colorscheme
 set termguicolors
-colorscheme base16-default-dark
+colorscheme apolo
 
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
@@ -101,3 +103,7 @@ set clipboard=unnamedplus
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
+
+" Enable ycm autocompletion
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
