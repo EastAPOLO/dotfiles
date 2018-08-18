@@ -247,7 +247,7 @@ interval = 5
 date =
 date-alt = " %Y-%m-%d"
 
-time = "%I:%M %p " 
+time = "%H:%M " 
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
