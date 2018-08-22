@@ -11,6 +11,8 @@ Plug 'tpope/vim-surround'
 Plug 'sirver/ultisnips'
 Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost --rust-completer'}
+Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 call plug#end()
 
@@ -107,3 +109,8 @@ set clipboard=unnamedplus
 " Enable ycm autocompletion
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+
+" On Windows use '.vim' instead of 'vimfiles'
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
