@@ -1,0 +1,14 @@
+# Set personal info
+set my_name = "Stefan Stojanovic"
+set from = "EastAPOLO@teknik.io"
+set use_from = "yes"
+
+# Set IMAP info
+set imap_user = "EastAPOLO@teknik.io"
+set folder = "imaps://mail.teknik.io/"
+set spoolfile = "+INBOX"
+set record = "Sent"
+set postponed = "Drafts"
+
+# Send email with smtp user
+set smtp_url="smtps://$imap_user@mail.teknik.io/"

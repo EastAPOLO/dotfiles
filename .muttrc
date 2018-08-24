@@ -1,0 +1,35 @@
+# Set editor
+set editor = vim
+
+# Set email check (seconds)
+set mail_check = 120
+
+# Allow Mutt to open a new IMAP connection automatically.
+unset imap_passive
+
+# Keep the IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+# Check all IMAP folders for new mail
+set imap_check_subscribed
+
+# Activate TLS if available on the server
+set ssl_starttls=yes
+
+# Display download progress (kb)
+set net_inc=5
+
+# Account 1
+folder-hook "EastAPOLO@teknik.io" "source ~/.mutt/teknik"
+account-hook "imaps://mail.teknik.io/" "set imap_user = EastAPOLO@teknik.io"
+
+# Account 2
+folder-hook "eastapolo@hotmail.com" "source ~/.mutt/hotmail"
+account-hook "imaps://imap-mail.outlook.com:993" "set imap_user = eastapolo@hotmail.com"
+
+# Set default account on startup
+source "~/.mutt/teknik"
+
+# Macros for switching accounts
+macro index <f1> '<sync-mailbox><enter-command>source ~/.mutt/teknik<enter><change-folder>!<enter>'
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/hotmail<enter><change-folder>!<enter>'

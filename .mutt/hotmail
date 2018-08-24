@@ -1,0 +1,14 @@
+# Set personal info
+set my_name = "Stefan Stojanovic"
+set from = "eastapolo@hotmail.com"
+set use_from = "yes"
+
+# Set IMAP info
+set imap_user = "eastapolo@hotmail.com"
+set folder = "imaps://imap-mail.outlook.com:993"
+set spoolfile = "+INBOX"
+set record = "+[hotmail]/Sent Mail"
+set postponed = "+[hotmail]/Drafts"
+
+# Send email with smtp user
+set smtp_url="smtp://eastapolo@hotmail.com@smtp.live.com:587/"
