@@ -32,12 +32,12 @@ cp -r ".local/"* "$HOME/.local/"
 cp -r ".fonts/"* "$HOME/.fonts/"
 
 # Copy scripts to home dir
-cp -r "scripts/"* "$HOME/scripts"
+cp -r "scripts/"* "$HOME/"
 
 # Install my favorite programs if apt is detected on the system
 if [ -x "$(command -v apt)" ]; then
     sudo apt update && sudo apt upgrade
-    sudo apt purge nano vi vim
+    sudo apt purge nano vi 
     sudo apt install htop zathura libreoffice synaptic git weechat fonts-noto vim
 fi
 
@@ -45,7 +45,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
@@ -54,11 +54,7 @@ if [ -x "$(command -v pacman)" ]; then
         git clone https://aur.archlinux.org/trizen.git
         cd "$HOME/sources/trizen"
         makepkg -csi
-    fi
-
-    if [ -x "$(command -v trizen)" ]; then
-        trizen -S alacritty-scrollback-git
-
+        trizen -S polybar
     fi
 fi
 
