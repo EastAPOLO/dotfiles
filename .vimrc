@@ -10,6 +10,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'sirver/ultisnips'
 Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
+Plug 'chriskempson/base16-vim'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost --rust-completer'}
 Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -39,7 +40,9 @@ noremap <expr> <right> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 
 nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bp\<cr>" : "\<left>")
 
 "Set colorscheme
-set termguicolors
+set t_Co=256 termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme apolo
 
 " Enable backspace behavior like in most text editors
