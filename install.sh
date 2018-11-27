@@ -32,7 +32,7 @@ cp -r ".local/"* "$HOME/.local/"
 cp -r ".fonts/"* "$HOME/.fonts/"
 
 # Copy scripts to home dir
-cp -r "scripts/"* "$HOME/"
+cp -r "scripts/" "$HOME/"
 
 # Install my favorite programs if apt is detected on the system
 if [ -x "$(command -v apt)" ]; then

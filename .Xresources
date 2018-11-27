@@ -27,12 +27,9 @@ xterm*termName: xterm-256color
 ! Scrollback
 *saveLines: 4096
 
-! Set right hand side scrollbar and color
-URxvt*scrollBar_right: true
-URxvt*scrollBar: true
-URxvt*scrollColor: #5A656A
-xterm*rightScrollBar: true
-xterm*ScrollBar: true
+! Disable scrollbar
+URxvt*scrollBar: false
+xterm*ScrollBar: false
 
 ! do not scroll with output
 *scrollTtyOutput: false
@@ -49,6 +46,10 @@ URxvt.geometry: 85x30
 
 ! Set terminal icon
 URxvt.iconFile:  /usr/share/icons/Adwaita/256x256/apps/utilities-terminal.png
+
+! Disable bold fonts
+XTerm*allowBoldFonts: false
+URxvt.boldFont:
 
 ! Set colorscheme
 *foreground: #DADADA
@@ -71,8 +72,8 @@ URxvt.iconFile:  /usr/share/icons/Adwaita/256x256/apps/utilities-terminal.png
 *color11:      #e5ab57
 
 !Blue
-*color4:       #0A4B90
-*color12:      #3A85E2
+*color4:       #3B669A
+*color12:      #5486C2
 
 !Magenta 
 *color5:       #88537b
