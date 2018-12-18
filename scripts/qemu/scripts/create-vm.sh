@@ -1,3 +1,3 @@
 #!/bin/sh
 
-qemu-img create -f "$1" "$2" "$3" 
+qemu-img create -f qcow2 "$1" "$2" 
