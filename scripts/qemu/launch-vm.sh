@@ -8,4 +8,4 @@ qemu-system-x86_64 \
     -usbdevice tablet \
     -vga virtio \
     -display gtk \
-    -hda "$1"
+    -drive file="$1",if=virtio
