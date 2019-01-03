@@ -59,6 +59,12 @@ user_pref("font.name.sans-serif.x-western", "Noto Sans");
 user_pref("font.name.monospace.x-unicode", "Noto Mono");
 user_pref("font.name.monospace.x-western", "Noto Mono");
 
+// Display all parts of the url in the location bar
+user_pref("browser.urlbar.trimURLs", false);
+
+// Enable DRM
+user_pref("media.eme.enabled", true);
+
 /* ******* */
 /* PRIVACY */
 /* ******* */
@@ -119,6 +125,62 @@ user_pref("camera.control.face_detection.enabled", false);
 // Disable sensors
 user_pref("device.sensors.enabled", false);
 
+// Disable browser cache
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false)
+user_pref("browser.cache.disk_cache_ssl", false);
+user_pref("browser.cache.offline.enable", false);
+user_pref("browser.cache.offline.insecure.enable", false);
+
+// Disable storing of extra session data
+user_pref("browser.sessionstore.privacy_level", 2);
+
+// Block third party cookies
+user_pref("network.cookie.cookieBehavior", 1);
+
+// Enforce websites to ask to store data for offline use
+user_pref("offline-apps.allow_by_default", false);
+
+// Disable history
+user_pref("browser.formfill.enable", false);
+user_pref("places.history.enabled", false);
+
+// Disable leaking typos in the location bar
+user_pref("keyword.enabled", false);
+
+// Disable location bar domain guessing
+user_pref("browser.fixup.alternate.enabled", false);
+
+// Disable search suggestions
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.suggest.searches", false);
+user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true);
+
+// Disable preloaded top websites in location bar
+user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
+
+// Disable autocomplete and suggestions in the location bar
+user_pref("browser.urlbar.autocomplete.enabled", true);
+user_pref("browser.urlbar.suggest.history", false);
+user_pref("browser.urlbar.suggest.bookmark", true);
+user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0);
+user_pref("browser.urlbar.autoFill.typed", false);
+
+// Clear on shutdown
+user_pref("privacy.clearOnShutdown.cache", true);
+user_pref("privacy.clearOnShutdown.history", true);
+user_pref("privacy.clearOnShutdown.formdata", true);
+user_pref("privacy.clearOnShutdown.offlineApps", true);
+
+// Items selected in the Clear Browsing Data dialog
+user_pref("privacy.cpd.cache", true);
+user_pref("privacy.cpd.formdata", true);
+user_pref("privacy.cpd.history", true);
+user_pref("privacy.cpd.offlineApps", true);
+
 /* ******** */
 /* SECURITY */
 /* ******** */
@@ -132,3 +194,29 @@ user_pref("security.tls.version.max", 4);
 
 // Disable webgl due to being a security risk
 user_pref("webgl.disabled", true);
+user_pref("pdfjs.enableWebGL", false);
+user_pref("webgl.min_capability_mode", false);
+user_pref("webgl.disable-extensions", true);
+user_pref("webgl.disable-fail-if-major-performance-caveat", true);
+user_pref("webgl.enable-webgl2", false);
+
+// Disable auto fill of username/password in form fields
+user_pref("signon.autofillForms", false);
+user_pref("signon.storeWhenAutocompleteOff", false);
+
+// Disable auto fill of passwords on http pages and show warning
+user_pref("signon.autofillForms.http", false);
+user_pref("security.insecure_field_warning.contextual.enabled", true);
+
+// Disable Flash plugin
+user_pref("plugin.state.flash", 0);
+
+// Block malicious window sizes from appearing on certain websites
+user_pref("browser.link.open_newwindow", 3);
+user_pref("browser.link.open_newwindow.restriction", 0);
+
+// Block pop-up windows
+user_pref("dom.disable_open_during_load", true);
+
+// Set max popups
+user_pref("dom.popup_maximum", 3);
