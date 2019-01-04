@@ -45,7 +45,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm pcmanfm-gtk3 zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts ranger w3mimgdisplay inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
@@ -67,17 +67,6 @@ sudo ln -sfv "/etc/fonts/conf.avail/10-hinting-slight.conf" "/etc/fonts/conf.d"
 sudo ln -sfv "/etc/fonts/conf.avail/70-no-bitmaps.conf" "/etc/fonts/conf.d"
 
 echo "Font configuration complete."
-
-# Setup vim-plug for neovim and vim
-if [ -f "$HOME/.vimrc" ] && [ -x "$(command -v vim)" ]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
-if [ -f "$HOME/.config/nvim/init.vim" ] && [ -x "$(command -v nvim)" ]; then
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
 
 # Install my favorite theme
 if [ -d "$HOME/sources" ]; then

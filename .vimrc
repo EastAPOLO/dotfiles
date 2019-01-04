@@ -1,19 +1,39 @@
+" Setup vim directories
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+
+if !isdirectory($HOME."/.vim/undo")
+    call mkdir($HOME."/.vim/undo", "", 0700)
+endif
+
+" Setup vim-plug
+if !isdirectory($HOME."/.vim/autoload")
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
 " Vi compatibility is a joke
 set nocompatible
 
 " Begin plugin initialization
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
-Plug 'chriskempson/base16-vim'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost --rust-completer'}
-Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'vim-latex/vim-latex'
+Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'rust-lang/rust.vim'
+Plug 'octol/vim-cpp-enhanced-highlight', {'for': 'cpp'}
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -117,3 +137,19 @@ let g:ycm_confirm_extra_conf = 0
 if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
+
+" Store undofile
+set undofile undodir=~/.vim/undo/ 
+ 
+" Set mappings
+nnoremap <F8> :TagbarToggle<CR>
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<C-J>"
+let g:UltiSnipsJumpForwardTrigger="<C-J>"
+let g:UltiSnipsJumpBackwardTrigger="<C-K>"
+
+" YCM
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_rust_src_path = '/usr/src/rust/src'
