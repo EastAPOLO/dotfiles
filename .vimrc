@@ -129,10 +129,6 @@ set clipboard=unnamedplus
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" Enable ycm autocompletion
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-
 " On Windows use '.vim' instead of 'vimfiles'
 if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
@@ -150,6 +146,9 @@ let g:UltiSnipsJumpForwardTrigger="<C-J>"
 let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 
 " YCM
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf ="~/.vim/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_rust_src_path = '/usr/src/rust/src'
+
+" Git Gutter
+set updatetime=1000
