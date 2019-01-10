@@ -180,6 +180,8 @@ user_pref("privacy.cpd.cache", true);
 user_pref("privacy.cpd.formdata", true);
 user_pref("privacy.cpd.history", true);
 user_pref("privacy.cpd.offlineApps", true);
+user_pref("privacy.cpd.passwords", false); 
+user_pref("privacy.cpd.sessions", false); 
 
 /* ******** */
 /* SECURITY */

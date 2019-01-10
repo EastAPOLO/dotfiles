@@ -16,10 +16,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -28,10 +28,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -40,10 +40,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+p split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+u split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -69,57 +69,60 @@ bindsym $mod+a focus parent
 for_window [window_role="GtkFileChooserDialog"] fullscreen enable
 
 # workspace variables
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
-set $workspace10 "10"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace $workspace6
-bindsym $mod+7 workspace $workspace7
-bindsym $mod+8 workspace $workspace8
-bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace $workspace6
-bindsym $mod+Shift+7 move container to workspace $workspace7
-bindsym $mod+Shift+8 move container to workspace $workspace8
-bindsym $mod+Shift+9 move container to workspace $workspace9
-bindsym $mod+Shift+0 move container to workspace $workspace10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # startupid variable
 set $exec_q exec --no-startup-id
 
 # sound
-bindsym $mod+p $exec_q mpc toggle
-bindsym $mod+bracketleft $exec_q mpc prev
-bindsym $mod+bracketright $exec_q mpc next
+bindsym $mod+Shift+p $exec_q mpc toggle
+bindsym $mod+b $exec_q mpc prev
+bindsym $mod+n $exec_q mpc next
 bindsym $mod+Shift+bracketleft $exec_q mpc volume -5
 bindsym $mod+Shift+bracketright $exec_q mpc volume +5
 
 # autostart applications in workspaces defined
-assign [class="Firefox"] $workspace1
-exec firefox
+assign [class="Firefox"] $ws1
+exec --no-startup-id firefox
 
-assign [class="Pavucontrol"] $workspace3
-exec pavucontrol
+assign [class="Pavucontrol"] $ws3
+exec --no-startup-id pavucontrol
+
+assign [class="jetbrains-clion"] $ws4
+exec --no-startup-id clion
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -149,8 +152,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # color variables
-set $bg-color 	         #1C1C1C
-set $inactive-bg-color   #1C1C1C
+set $bg-color 	         #1F1F1F
+set $inactive-bg-color   #1F1F1F
 set $text-color          #DADADA
 set $inactive-text-color #707070
 set $urgent-bg-color     #E53935
@@ -173,5 +176,8 @@ for_window [class="^.*"] border pixel 0
 # launch polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-# Set background wallpaper
+# set background wallpaper
 exec --no-startup-id feh --bg-scale $HOME/pictures/Wallpapers/rocket_wp.png 
+
+# compton
+exec --no-startup-id compton
