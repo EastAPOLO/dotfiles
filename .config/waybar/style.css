@@ -6,13 +6,14 @@
 }
 
 window {
-    background: #1A1717;
-    color: white;
+    background: #1A1A1A;
+    color: #DADADA;
     border-bottom: 2px solid #3A85E2;
 }
 
 window #workspaces {
     border-bottom: 2px solid #3A85E2;
+    margin-top: 4px;
 }
 
 #workspaces button {
@@ -29,6 +30,7 @@ window #workspaces {
     background-color: #2B2B2B;
     border-bottom: 2px solid #3A85E2;
     padding: 4px;
+    margin-top: 4px;
 }
 
 #battery {

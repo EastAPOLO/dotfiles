@@ -186,14 +186,6 @@ user_pref("privacy.cpd.sessions", false);
 /* ******** */
 /* SECURITY */
 /* ******** */
-// Disable insecure SSL/TLS renegotiation
-user_pref("security.ssl.require_safe_negotiation", true);
-user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
-
-// Set min and max TLS version
-user_pref("security.tls.version.min", 3);
-user_pref("security.tls.version.max", 4);
-
 // Disable webgl due to being a security risk
 user_pref("webgl.disabled", true);
 user_pref("pdfjs.enableWebGL", false);
