@@ -38,7 +38,7 @@ cp -r "scripts/" "$HOME/"
 if [ -x "$(command -v apt)" ]; then
     sudo apt update && sudo apt upgrade
     sudo apt purge nano vi 
-    sudo apt install htop zathura libreoffice synaptic git weechat fonts-noto vim
+    sudo apt install htop zathura libreoffice synaptic git weechat fonts-noto vim libboost-dev cmake build-essential clang llvm curl wget feh rofi ranger ttf-dejavu firefox-esr xorg i3 mpv rustc
 fi
 
 # Install my favorite programs if pacman is detected on the system
