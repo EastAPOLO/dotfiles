@@ -19,12 +19,19 @@ user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.aboutHomeSnippets.updateUrl", "");
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.library.activity-stream.enabled", false);
+user_pref("browser.aboutHomeSnippets.updateUrl", "");
 
 // Disable private browsing on autostart
 user_pref("browser.privatebrowsing.autostart", false);
@@ -64,6 +71,12 @@ user_pref("browser.urlbar.trimURLs", false);
 
 // Enable DRM
 user_pref("media.eme.enabled", true);
+
+// Allow windows to self close
+user_pref("dom.allow_scripts_to_close_windows", true);
+
+// Ask where to save files
+user_pref("browser.download.useDownloadDir", false);
 
 /* ******* */
 /* PRIVACY */
@@ -129,7 +142,7 @@ user_pref("device.sensors.enabled", false);
 user_pref("browser.cache.disk.enable", false);
 user_pref("browser.cache.disk.capacity", 0);
 user_pref("browser.cache.disk.smart_size.enabled", false);
-user_pref("browser.cache.disk.smart_size.first_run", false)
+user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk_cache_ssl", false);
 user_pref("browser.cache.offline.enable", false);
 user_pref("browser.cache.offline.insecure.enable", false);

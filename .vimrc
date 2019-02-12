@@ -34,6 +34,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'rust-lang/rust.vim'
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': 'cpp'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'gu-fan/riv.vim'
 
 call plug#end()
 
@@ -49,7 +50,7 @@ set tabstop=4
 " When indenting with '>', use 4 spaces width
 set shiftwidth=4
 
-" Sets the number of columns for a TAB
+" Set the number of columns for a TAB
 set softtabstop=4
 
 " On pressing tab, insert 4 spaces
@@ -59,7 +60,7 @@ set expandtab
 noremap <expr> <right> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bn\<cr>" : "\<right>")
 nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bp\<cr>" : "\<left>")
 
-"Set colorscheme
+" Set colorscheme
 set t_Co=256 termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -136,9 +137,30 @@ endif
 
 " Store undofile
 set undofile undodir=~/.vim/undo/ 
+
+" Enable code pasting
+set pastetoggle=<F2>
  
 " Set mappings
 nnoremap <F8> :TagbarToggle<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Set 80 character limit line
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
+"Always open help files in a rightward vertical split 
+autocmd FileType help,* wincmd L
+
+" Open new file splits to the right and bottom 
+set splitright
+set splitbelow
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<C-J>"
