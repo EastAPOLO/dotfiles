@@ -45,7 +45,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts ranger w3mimgdisplay inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv the_silver_searcher breeze-icons lxappearance
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat gvim ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts ranger w3mimgdisplay inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv the_silver_searcher breeze-icons lxappearance bat
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
