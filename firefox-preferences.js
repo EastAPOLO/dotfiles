@@ -78,6 +78,9 @@ user_pref("dom.allow_scripts_to_close_windows", true);
 // Ask where to save files
 user_pref("browser.download.useDownloadDir", false);
 
+// Disable resuming session from crash
+user_pref("browser.sessionstore.resume_from_crash", false);
+
 /* ******* */
 /* PRIVACY */
 /* ******* */
@@ -196,6 +199,10 @@ user_pref("privacy.cpd.offlineApps", true);
 user_pref("privacy.cpd.passwords", false); 
 user_pref("privacy.cpd.sessions", false); 
 
+// Limit IP leaks of WebRTC
+user_pref("media.peerconnection.ice.default_address_only", true);
+user_pref("media.peerconnection.ice.no_host", true);
+
 /* ******** */
 /* SECURITY */
 /* ******** */
@@ -227,3 +234,6 @@ user_pref("dom.disable_open_during_load", true);
 
 // Set max popups
 user_pref("dom.popup_maximum", 3);
+
+// Disable asking for passwords to be saved
+user_pref("signon.rememberSignons", false);

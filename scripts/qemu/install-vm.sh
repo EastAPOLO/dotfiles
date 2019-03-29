@@ -9,4 +9,6 @@ qemu-system-x86_64 \
     -device usb-tablet \
     -vga virtio \
     -display gtk \
-    -drive file="$1",if=virtio
+    -boot d \
+    -cdrom "$1" \
+    -drive file="$2",if=virtio
