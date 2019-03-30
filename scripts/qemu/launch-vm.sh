@@ -7,6 +7,7 @@ qemu-system-x86_64 \
     -enable-kvm \
     -usb \
     -device usb-tablet \
+    -machine type=pc,accel=kvm \
     -vga virtio \
     -display gtk \
     -drive file="$1",if=virtio
