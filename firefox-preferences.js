@@ -14,25 +14,6 @@ user_pref("browser.startup.homepage", "https://duckduckgo.com");
 user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtab.preload", false);
 
-// Disable activity stream completely
-user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
-user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
-user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-user_pref("browser.newtabpage.activity-stream.showSearch", false);
-user_pref("browser.library.activity-stream.enabled", false);
-user_pref("browser.aboutHomeSnippets.updateUrl", "");
-
 // Disable private browsing on autostart
 user_pref("browser.privatebrowsing.autostart", false);
 
@@ -80,6 +61,28 @@ user_pref("browser.download.useDownloadDir", false);
 
 // Disable resuming session from crash
 user_pref("browser.sessionstore.resume_from_crash", false);
+
+// Disable notifications
+user_pref("permissions.default.desktop-notification", 2);
+
+// Disable activity stream completely
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
+user_pref("browser.library.activity-stream.enabled", false);
+user_pref("browser.aboutHomeSnippets.updateUrl", "");
 
 /* ******* */
 /* PRIVACY */
@@ -145,7 +148,7 @@ user_pref("device.sensors.enabled", false);
 user_pref("browser.cache.disk.enable", false);
 user_pref("browser.cache.disk.capacity", 0);
 user_pref("browser.cache.disk.smart_size.enabled", false);
-user_pref("browser.cache.disk.smart_size.first_run", false);
+user_pref("browser.cache.disk.smart_size.first_run", false)
 user_pref("browser.cache.disk_cache_ssl", false);
 user_pref("browser.cache.offline.enable", false);
 user_pref("browser.cache.offline.insecure.enable", false);
@@ -196,8 +199,9 @@ user_pref("privacy.cpd.cache", true);
 user_pref("privacy.cpd.formdata", true);
 user_pref("privacy.cpd.history", true);
 user_pref("privacy.cpd.offlineApps", true);
-user_pref("privacy.cpd.passwords", false); 
+user_pref("privacy.cpd.passwords", true); 
 user_pref("privacy.cpd.sessions", false); 
+user_pref("privacy.cpd.cookies", false);
 
 // Limit IP leaks of WebRTC
 user_pref("media.peerconnection.ice.default_address_only", true);
@@ -216,10 +220,9 @@ user_pref("webgl.enable-webgl2", false);
 
 // Disable auto fill of username/password in form fields
 user_pref("signon.autofillForms", false);
-user_pref("signon.storeWhenAutocompleteOff", false);
-
-// Disable auto fill of passwords on http pages and show warning
 user_pref("signon.autofillForms.http", false);
+
+// Show warnings for insecure pages
 user_pref("security.insecure_field_warning.contextual.enabled", true);
 
 // Disable Flash plugin
@@ -235,5 +238,14 @@ user_pref("dom.disable_open_during_load", true);
 // Set max popups
 user_pref("dom.popup_maximum", 3);
 
-// Disable asking for passwords to be saved
+// Disable form autofill
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.available", "off");
+user_pref("extensions.formautofill.creditCards.enabled", false);
+user_pref("extensions.formautofill.heuristics.enabled", false);
+
+// Disable asking to save passwords
 user_pref("signon.rememberSignons", false);
+
+// Don't let sites handle saved logins and passwords
+user_pref("signon.storeWhenAutocompleteOff", false);
