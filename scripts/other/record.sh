@@ -7,4 +7,6 @@ if [[ $running != 1 ]]; then
     exit 0;
 fi
 
-ffmpeg -video_size 1920x1080 -framerate 60 -f x11grab -i :0.0+0,0 -f alsa -ac 2 -i pulse -acodec libvorbis "$@".mkv
+resolution=$(xdpyinfo | grep -oP 'dimensions:\s+\K\S+')
+
+ffmpeg -s $resolution -framerate 60 -f x11grab -i :0.0+0,0 -f alsa -ac 2 -i pulse -acodec libvorbis "$@".mkv
