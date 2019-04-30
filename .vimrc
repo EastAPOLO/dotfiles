@@ -24,7 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost --rust-completer'}
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost'}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-latex/vim-latex'
 Plug 'airblade/vim-gitgutter'
