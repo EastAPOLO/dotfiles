@@ -26,6 +26,22 @@ window #workspaces {
     background: #383838;
 }
 
+#workspaces button:hover {
+    background: #1A1A1A;
+    border: none;
+    transition: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.focused:hover {
+    background: #383838;
+    border: none;
+    transition: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
 #clock {
     background-color: #2B2B2B;
     border-bottom: 2px solid #3A85E2;
@@ -45,13 +61,6 @@ window #workspaces {
     background-color: #26A65B;
 }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
-}
-
 #battery.warning {
     background: #f53c3c;
     color: white;
@@ -61,4 +70,3 @@ window #workspaces {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
