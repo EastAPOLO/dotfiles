@@ -45,7 +45,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts ranger w3m inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv breeze-icons lxappearance usbutils boost
+    sudo pacman -S xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop xarchiver zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts ranger w3m inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv breeze-icons lxappearance usbutils boost boost-libs
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
@@ -56,6 +56,10 @@ if [ -x "$(command -v pacman)" ]; then
         makepkg -csi
         trizen -S polybar
     fi
+    
+    # Start services
+    sudo systemctl enable sshd.service && sudo systemctl start sshd.service
+    sudo systemctl enable org.cups.cupsd.service && sudo systemctl start org.cups.cupsd.service
 fi
 
 # Set sane font rendering defaults
