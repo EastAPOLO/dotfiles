@@ -24,9 +24,9 @@ Plug 'tpope/vim-surround'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
+Plug 'rakr/vim-one'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost'}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'vim-latex/vim-latex'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
@@ -35,6 +35,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': 'cpp'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'gu-fan/riv.vim'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'itchyny/vim-haskell-indent'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -64,7 +67,8 @@ nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 
 set t_Co=256 termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme apolo
+colorscheme one
+set background=light
 
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
@@ -174,3 +178,6 @@ let g:ycm_rust_src_path = '/usr/src/rust/src'
 
 " Git Gutter
 set updatetime=1000
+
+" Copy more lines
+set viminfo='100,<1000,s100,h

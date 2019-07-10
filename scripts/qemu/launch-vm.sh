@@ -8,6 +8,6 @@ qemu-system-x86_64 \
     -usb \
     -device usb-tablet \
     -machine type=pc,accel=kvm \
-    -vga virtio \
+    -vga qxl \
     -display gtk \
-    -drive file="$1",if=virtio
+    -drive file="$1",if=ide

@@ -2,28 +2,28 @@
 
 # Copy config folders and files to home dir
 if [ -d "$HOME/.config" ]; then
-    cp -rv ".config/"* "$HOME/.config/"
+    cp -r ".config/"* "$HOME/.config/"
 else
-    mkdir -v "$HOME/.config"
-    cp -rv ".config/"* "$HOME/.config/"
+    mkdir "$HOME/.config"
+    cp -r ".config/"* "$HOME/.config/"
 fi
 
 # Copy bash config files to home dir
-cp -v ".bashrc" "$HOME/"
-cp -v ".bash_profile" "$HOME/"
-cp -v ".bash_logout" "$HOME/"
+cp ".bashrc" "$HOME/"
+cp ".bash_profile" "$HOME/"
+cp ".bash_logout" "$HOME/"
 
 # Copy vimrc to home dir
-cp -v ".vimrc" "$HOME/"
+cp ".vimrc" "$HOME/"
 
 # Copy xinitrc to home dir
-cp -v ".xinitrc" "$HOME/"
+cp ".xinitrc" "$HOME/"
 
 # Copy Xresources to home dir
-cp -v ".Xresources" "$HOME/"
+cp ".Xresources" "$HOME/"
 
 # Copy etc config files to /etc
-sudo cp -rv ".config/etc/"* "/etc/"
+sudo cp -r ".config/etc/"* "/etc/"
 
 # Copy local dir to home dir 
 cp -r ".local/"* "$HOME/.local/"
@@ -65,10 +65,10 @@ fi
 # Set sane font rendering defaults
 echo "Symlinking fonts ..."
 
-sudo ln -sfv "/etc/fonts/conf.avail/11-lcdfilter-default.conf" "/etc/fonts/conf.d"
-sudo ln -sfv "/etc/fonts/conf.avail/10-sub-pixel-rgb.conf" "/etc/fonts/conf.d"
-sudo ln -sfv "/etc/fonts/conf.avail/10-hinting-slight.conf" "/etc/fonts/conf.d"
-sudo ln -sfv "/etc/fonts/conf.avail/70-no-bitmaps.conf" "/etc/fonts/conf.d"
+sudo ln -sf "/etc/fonts/conf.avail/11-lcdfilter-default.conf" "/etc/fonts/conf.d"
+sudo ln -sf "/etc/fonts/conf.avail/10-sub-pixel-rgb.conf" "/etc/fonts/conf.d"
+sudo ln -sf "/etc/fonts/conf.avail/10-hinting-slight.conf" "/etc/fonts/conf.d"
+sudo ln -sf "/etc/fonts/conf.avail/70-no-bitmaps.conf" "/etc/fonts/conf.d"
 
 echo "Font configuration complete."
 
@@ -78,4 +78,12 @@ if [ -d "$HOME/sources" ]; then
     git clone "https://gitlab.com/EastAPOLO/Arc-Apolo.git"
     cd "Arc-Apolo"
     ./install.sh
+fi
+
+# Create local bin dir
+if [ -d "$HOME/.local/bin" ]; then
+    cp -r "scripts/bin/*" "$HOME/.local/bin"
+else
+    mkdir "$HOME/.local/bin"
+    cp -r "scripts/bin/*" "$HOME/.local/bin"
 fi
