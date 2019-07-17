@@ -13,7 +13,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher) 
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec dmenu_run -h 30 -fn "Noto Mono" -nb "#2B2929"
 
 # change focus
 bindsym $mod+h focus left
@@ -177,7 +177,10 @@ for_window [class="^.*"] border pixel 0
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # set background wallpaper
-exec --no-startup-id feh --bg-scale $HOME/pictures/Wallpapers/rocket_wp.png 
+exec --no-startup-id feh --bg-scale $HOME/downloads/best-resolution-for-desktop-wallpaper_3115573.jpg
 
 # compton
 exec --no-startup-id compton
+
+# start lemonbar
+exec --no-startup-id $HOME/sources/apolo-bar/start.sh
