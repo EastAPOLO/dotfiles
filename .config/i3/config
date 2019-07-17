@@ -12,7 +12,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi (a program launcher) 
+# start program launcher
 bindsym $mod+d exec dmenu_run -h 30 -fn "Noto Mono" -nb "#2B2929"
 
 # change focus
