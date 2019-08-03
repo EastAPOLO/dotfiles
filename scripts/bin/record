@@ -2,7 +2,7 @@
 
 # If recording is in process, cancel it to start transcoding
 running=$(ps ax | grep ffmpeg | wc -l)
-if [[ $running != 1 ]]; then
+if [ $running != 1 ]; then
     pkill ffmpeg;
     exit 0;
 fi

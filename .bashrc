@@ -1,5 +1,3 @@
-# Begin ~/.bashrc
-
 # System wide aliases and functions.
 
 # System wide environment variables and startup programs should go into
@@ -49,13 +47,8 @@ alias py2='python2'
 alias dl='youtube-dl -o "%(title)s.%(ext)s"'
 
 # Check the weather
-wttr(){ 
+weather(){ 
     curl wttr.in/"$1" 
-}
-
-# Create and change into directory
-mkcd(){ 
-    mkdir -p "$1"; cd "$1" 
 }
 
 # Get public ip address
@@ -65,3 +58,6 @@ pubip(){
 
 # Turn off bash hash function
 set +h
+
+# Set to vi editing mode
+set -o vi
