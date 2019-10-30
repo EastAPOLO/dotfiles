@@ -38,9 +38,6 @@ Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
-" Enable global indentation
-filetype plugin indent on
-
 " Set line numbers
 set number
 
