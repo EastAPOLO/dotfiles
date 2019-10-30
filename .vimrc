@@ -26,18 +26,15 @@ Plug 'honza/vim-snippets'
 Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
 Plug 'rakr/vim-one'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost'}
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-fugitive'
 Plug 'rust-lang/rust.vim'
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': 'cpp'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'gu-fan/riv.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'itchyny/vim-haskell-indent'
 Plug 'lervag/vimtex'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -134,11 +131,6 @@ set clipboard=unnamedplus
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" On Windows use '.vim' instead of 'vimfiles'
-if has('win32') || has('win64')
-    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-endif
-
 " Store undofile
 set undofile undodir=~/.vim/undo/ 
 
@@ -181,3 +173,6 @@ set updatetime=1000
 
 " Copy more lines
 set viminfo='100,<1000,s100,h
+
+" Set lightline theme
+let g:lightline = {'colorscheme': 'PaperColor'}
