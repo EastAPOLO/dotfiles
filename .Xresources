@@ -1,6 +1,6 @@
 ! Set font name and size
-URxvt.font: xft:Noto Mono:style=Regular:size=12
-xterm*faceName: Noto Mono
+URxvt.font: xft:Fira Mono:style=Regular:size=12
+xterm*faceName: Fira Mono
 xterm*faceSize: 12
 
 ! Set term as login shell
@@ -52,11 +52,11 @@ XTerm*allowBoldFonts: false
 URxvt.boldFont:
 
 ! Set colorscheme
-*foreground: #DADADA
-*background: #1C1C1C
+*foreground: #353a44
+*background: #fafafa
 
 !Black
-*color0:       #1A1717
+*color0:       #1A1A1A
 *color8:       #1C1C1C
 
 !Red
@@ -64,16 +64,16 @@ URxvt.boldFont:
 *color9:       #ca4d4d
 
 !Green
-*color2:       #2C9B43
-*color10:      #36BF52
+*color2:       #4fa64e
+*color10:      #50a14f
 
 !Yellow
 *color3:       #d27049
 *color11:      #e5ab57
 
 !Blue
-*color4:       #3B669A
-*color12:      #5486C2
+*color4:       #6c99ff
+*color12:      #4078f2
 
 !Magenta 
 *color5:       #88537b
@@ -85,4 +85,4 @@ URxvt.boldFont:
 
 !White
 *color7:       #A4A4A4
-*color15:      #DADADA
+*color15:      #353a44
