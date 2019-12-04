@@ -45,7 +45,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S --needed xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts w3m inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv breeze-icons lxappearance usbutils boost boost-libs texlive-core texlive-fontsextra texlive-latexextra cups xorg-xdpyinfo telegram-desktop
+    sudo pacman -S --needed xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts w3m inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv breeze-icons lxappearance usbutils boost boost-libs texlive-core texlive-fontsextra texlive-latexextra cups xorg-xdpyinfo telegram-desktop keepassxc qemu 
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
@@ -54,11 +54,13 @@ if [ -x "$(command -v pacman)" ]; then
         git clone https://aur.archlinux.org/yay.git
         cd "$HOME/sources/yay"
         makepkg -csi
+        yay -S fuf-git
     fi
     
     # Start services
     sudo systemctl enable sshd.service && sudo systemctl start sshd.service
     sudo systemctl enable org.cups.cupsd.service && sudo systemctl start org.cups.cupsd.service
+    sudo timedatectl set-ntp true 
 fi
 
 # Set sane font rendering defaults
