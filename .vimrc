@@ -113,7 +113,7 @@ set laststatus=2
 set showcmd
 
 " Set indentation for c languages
-set cinoptions=g0,j1,:0,L0
+set cinoptions=g0,j1,L0,l1
 
 " Set the default yanking/pasting register the system clipboard
 set clipboard=unnamedplus
@@ -135,7 +135,7 @@ set undofile undodir=~/.vim/undo/
 set pastetoggle=<F2>
  
 " Set mappings
-nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F2> :TagbarToggle<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>

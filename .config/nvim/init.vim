@@ -13,27 +13,21 @@ set nocompatible
 
 " Begin plugin initialization
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
 Plug 'rakr/vim-one'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost'}
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-Plug 'itchyny/vim-haskell-indent'
 Plug 'lervag/vimtex'
-
+Plug 'itchyny/lightline.vim'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost', 'on': []}
+Plug 'xuhdev/vim-latex-live-preview'
 call plug#end()
-
-" Enable global indentation
-filetype plugin indent on
 
 " Set line numbers
 set number
@@ -66,14 +60,6 @@ set backspace=indent,eol,start
 
 " Set lines of history vim has to remember
 set history=500
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -110,7 +96,7 @@ set laststatus=2
 set showcmd
 
 " Set indentation for c languages
-set cinoptions=g0,j1,:0,L0
+set cinoptions=g0,j1,L0,l1
 
 " Set the default yanking/pasting register the system clipboard
 set clipboard=unnamedplus
@@ -125,19 +111,15 @@ set clipboard=unnamedplus
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" On Windows use '.vim' instead of 'vimfiles'
-if has('win32') || has('win64')
-    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-endif
-
 " Store undofile
-set undofile undodir=~/.vim/undo/ 
+set undofile undodir=~/.local/share/nvim/undo/
 
 " Enable code pasting
 set pastetoggle=<F2>
  
 " Set mappings
-nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F2> :TagbarToggle<CR>
+nnoremap <F3> :LLPStartPreview<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -149,9 +131,6 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
-
-"Always open help files in a rightward vertical split 
-autocmd FileType help,* wincmd L
 
 " Open new file splits to the right and bottom 
 set splitright
@@ -165,9 +144,27 @@ let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-k>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
-" YCM
-let g:ycm_global_ycm_extra_conf ="~/.local/share/nvim/ycm_extra_conf.py"
-let g:ycm_confirm_extra_conf = 0
-
 " Git Gutter
 set updatetime=1000
+
+" Set lightline colorscheme
+let g:lightline = {'colorscheme': 'PaperColor'}
+
+" Set python3 executable
+let g:python3_host_prog = '/usr/bin/python3'
+
+" Disable ex-mode
+nnoremap Q <NOP>
+
+" YCM settings
+let g:ycm_global_ycm_extra_conf ="~/.config/nvim/ycm_extra_conf.py"
+let g:ycm_confirm_extra_conf = 0
+
+" Load YCM in insert mode
+augroup load_us_ycm
+  autocmd!
+  autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_us_ycm
+augroup END
+
+" Set pdf viewer for latex-preview
+let g:livepreview_previewer = 'zathura'
