@@ -45,7 +45,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S --needed xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts w3m inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv breeze-icons lxappearance usbutils boost boost-libs texlive-core texlive-fontsextra texlive-latexextra cups xorg-xdpyinfo telegram-desktop keepassxc qemu xdg-user-dirs valgrind
+    sudo pacman -S --needed xorg-server xorg-xinit firefox neofetch htop feh libreoffice i3-wm zathura-pdf-mupdf weechat ttf-dejavu ttf-ubuntu-font-family pulseaudio pavucontrol alsa-utils rofi git iotop zip unzip unrar p7zip xorg-xrandr rustup qt5ct maim ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts w3m inkscape optipng ctags qt5-styleplugins ntfs-3g openssh cifs-utils mpv breeze-icons lxappearance usbutils boost boost-libs texlive-core texlive-fontsextra texlive-latexextra cups xorg-xdpyinfo telegram-desktop keepassxc qemu xdg-user-dirs valgrind polkit-gnome
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"
