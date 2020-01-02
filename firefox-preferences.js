@@ -14,6 +14,25 @@ user_pref("browser.startup.homepage", "https://duckduckgo.com");
 user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtab.preload", false);
 
+// Disable activity stream completely
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
+user_pref("browser.library.activity-stream.enabled", false);
+user_pref("browser.aboutHomeSnippets.updateUrl", "");
+
 // Disable private browsing on autostart
 user_pref("browser.privatebrowsing.autostart", false);
 
@@ -62,28 +81,6 @@ user_pref("browser.download.useDownloadDir", false);
 // Disable resuming session from crash
 user_pref("browser.sessionstore.resume_from_crash", false);
 
-// Disable notifications
-user_pref("permissions.default.desktop-notification", 2);
-
-// Disable activity stream completely
-user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
-user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
-user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-user_pref("browser.newtabpage.activity-stream.showSearch", false);
-user_pref("browser.library.activity-stream.enabled", false);
-user_pref("browser.aboutHomeSnippets.updateUrl", "");
-
 /* ******* */
 /* PRIVACY */
 /* ******* */
@@ -115,6 +112,7 @@ user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false); 
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
 user_pref("toolkit.telemetry.hybridContent.enabled", false); 
+user_pref("toolkit.telemetry.coverage.opt-out", true);
 user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("toolkit.coverage.opt-out", true); 
 user_pref("datareporting.healthreport.uploadEnabled", false);
@@ -143,15 +141,6 @@ user_pref("camera.control.face_detection.enabled", false);
 
 // Disable sensors
 user_pref("device.sensors.enabled", false);
-
-// Disable browser cache
-user_pref("browser.cache.disk.enable", false);
-user_pref("browser.cache.disk.capacity", 0);
-user_pref("browser.cache.disk.smart_size.enabled", false);
-user_pref("browser.cache.disk.smart_size.first_run", false);
-user_pref("browser.cache.disk_cache_ssl", false);
-user_pref("browser.cache.offline.enable", false);
-user_pref("browser.cache.offline.insecure.enable", false);
 
 // Disable storing of extra session data
 user_pref("browser.sessionstore.privacy_level", 2);
@@ -199,13 +188,18 @@ user_pref("privacy.cpd.cache", true);
 user_pref("privacy.cpd.formdata", true);
 user_pref("privacy.cpd.history", true);
 user_pref("privacy.cpd.offlineApps", true);
-user_pref("privacy.cpd.passwords", true); 
+user_pref("privacy.cpd.passwords", false); 
 user_pref("privacy.cpd.sessions", false); 
-user_pref("privacy.cpd.cookies", false);
 
 // Limit IP leaks of WebRTC
 user_pref("media.peerconnection.ice.default_address_only", true);
 user_pref("media.peerconnection.ice.no_host", true);
+
+// Disable crash reports
+user_pref("breakpad.reportURL", "");
+user_pref("browser.tabs.crashReporting.sendReport", false); 
+user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
+user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
 
 /* ******** */
 /* SECURITY */
@@ -220,9 +214,10 @@ user_pref("webgl.enable-webgl2", false);
 
 // Disable auto fill of username/password in form fields
 user_pref("signon.autofillForms", false);
-user_pref("signon.autofillForms.http", false);
+user_pref("signon.storeWhenAutocompleteOff", false);
 
-// Show warnings for insecure pages
+// Disable auto fill of passwords on http pages and show warning
+user_pref("signon.autofillForms.http", false);
 user_pref("security.insecure_field_warning.contextual.enabled", true);
 
 // Disable Flash plugin
@@ -238,14 +233,5 @@ user_pref("dom.disable_open_during_load", true);
 // Set max popups
 user_pref("dom.popup_maximum", 3);
 
-// Disable form autofill
-user_pref("extensions.formautofill.addresses.enabled", false);
-user_pref("extensions.formautofill.available", "off");
-user_pref("extensions.formautofill.creditCards.enabled", false);
-user_pref("extensions.formautofill.heuristics.enabled", false);
-
-// Disable asking to save passwords
+// Disable asking for passwords to be saved
 user_pref("signon.rememberSignons", false);
-
-// Don't let sites handle saved logins and passwords
-user_pref("signon.storeWhenAutocompleteOff", false);
