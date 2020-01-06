@@ -155,9 +155,6 @@ set updatetime=1000
 " Set lightline colorscheme
 let g:lightline = {'colorscheme': 'PaperColor'}
 
-" Set python3 executable
-let g:python3_host_prog = '/usr/bin/python3'
-
 " Disable ex-mode
 nnoremap Q <NOP>
 
