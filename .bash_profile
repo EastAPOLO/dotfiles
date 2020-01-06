@@ -1,8 +1,3 @@
-# Begin ~/.bash_profile
-# Written for Beyond Linux From Scratch
-# by James Robertson <jameswrobertson@earthlink.net>
-# updated by Bruce Dubbs <bdubbs@linuxfromscratch.org>
-
 # Personal environment variables and startup programs.
 
 # Personal aliases and functions should go in ~/.bashrc.  System wide
@@ -23,5 +18,3 @@ export EDITOR="vim"
 export GOOGLE_API_KEY="no"
 export GOOGLE_DEFAULT_CLIENT_ID="no"
 export GOOGLE_DEFAULT_CLIENT_SECRET="no"
-
-# End ~/.bash_profile
