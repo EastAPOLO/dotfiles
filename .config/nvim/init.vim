@@ -25,9 +25,14 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'itchyny/lightline.vim'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang --system-boost', 'on': []}
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'rust-lang/rust.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 call plug#end()
+
+" Deoplete lazy loading 
+autocmd InsertEnter * call deoplete#enable()
 
 " Set line numbers
 set number
@@ -156,15 +161,8 @@ let g:python3_host_prog = '/usr/bin/python3'
 " Disable ex-mode
 nnoremap Q <NOP>
 
-" YCM settings
-let g:ycm_global_ycm_extra_conf ="~/.config/nvim/ycm_extra_conf.py"
-let g:ycm_confirm_extra_conf = 0
-
-" Load YCM in insert mode
-augroup load_us_ycm
-  autocmd!
-  autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_us_ycm
-augroup END
-
 " Set pdf viewer for latex-preview
 let g:livepreview_previewer = 'zathura'
+
+" Language servers
+let g:LanguageClient_serverCommands = {'cpp': ['clangd']}
