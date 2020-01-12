@@ -231,3 +231,6 @@ exec telegram-desktop
 
 assign [app_id="pavucontrol"] $ws3
 exec pavucontrol
+
+# Disable X support
+xwayland disable
