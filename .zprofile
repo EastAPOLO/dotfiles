@@ -21,8 +21,8 @@ export LESS_TERMCAP_so=$'\e[49m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[34m'
 
-# Qt5 wayland
-QT_QPA_PLATFORM=wayland-egl
-
-# Firefox wayland
+# Wayland support
 export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland-egl
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export GDK_BACKEND=wayland
