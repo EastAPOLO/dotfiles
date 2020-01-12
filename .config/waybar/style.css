@@ -1,8 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Noto;
-    font-size: 15px;
+    font-family: Noto Sans;
+    font-size: 16px;
 }
 
 window {
@@ -17,7 +17,7 @@ window #workspaces {
 }
 
 #workspaces button {
-    padding: 2px 8px;
+    padding: 1px 4px;
     color: #DADADA;
 
 }
