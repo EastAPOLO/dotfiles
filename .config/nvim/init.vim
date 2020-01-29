@@ -155,6 +155,9 @@ set updatetime=1000
 " Set lightline colorscheme
 let g:lightline = {'colorscheme': 'PaperColor'}
 
+" Set python3 executable
+let g:python3_host_prog = '/usr/bin/python3'
+
 " Disable ex-mode
 nnoremap Q <NOP>
 
@@ -162,4 +165,4 @@ nnoremap Q <NOP>
 let g:livepreview_previewer = 'zathura'
 
 " Language servers
-let g:LanguageClient_serverCommands = {'cpp': ['clangd']}
+let g:LanguageClient_serverCommands = {'c': ['ccls'], 'cpp': ['ccls', '--init={"clang": {"extraArgs": ["-std=c++17"]}}'], 'rust': ['rustup', 'run', 'stable', 'rls']}
