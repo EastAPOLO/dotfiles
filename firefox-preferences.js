@@ -81,6 +81,9 @@ user_pref("browser.download.useDownloadDir", false);
 // Disable resuming session from crash
 user_pref("browser.sessionstore.resume_from_crash", false);
 
+// Disable firefox accounts and sync
+user_pref("identity.fxaccounts.enabled", false);
+
 /* ******* */
 /* PRIVACY */
 /* ******* */
@@ -125,6 +128,7 @@ user_pref("beacon.enabled", false);
 
 // Enable privacy tracking protection
 user_pref("privacy.trackingprotection.enabled", true);
+user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.trackingprotection.pbmode.enabled", true); 
 
 // Disable date/time picker to avoid locale leaking
@@ -132,9 +136,6 @@ user_pref("dom.forms.datetime", false);
 
 // Prevent 3rd party tracking
 user_pref("privacy.firstparty.isolate", true);
-
-// Prevent fingerprinting
-user_pref("privacy.resistFingerprinting", true);
 
 // Disable face recognition
 user_pref("camera.control.face_detection.enabled", false);
@@ -147,6 +148,7 @@ user_pref("browser.sessionstore.privacy_level", 2);
 
 // Block third party cookies
 user_pref("network.cookie.cookieBehavior", 1);
+user_pref("browser.contentblocking.category", "custom");
 
 // Enforce websites to ask to store data for offline use
 user_pref("offline-apps.allow_by_default", false);
@@ -201,16 +203,19 @@ user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
 
+// Prevent websites from seeing what you do with your clipboard
+user_pref("dom.event.clipboardevents.enabled", false);
+
 /* ******** */
 /* SECURITY */
 /* ******** */
 // Disable webgl due to being a security risk
 user_pref("webgl.disabled", true);
 user_pref("pdfjs.enableWebGL", false);
+user_pref("webgl.enable-webgl2", false);
 user_pref("webgl.min_capability_mode", false);
 user_pref("webgl.disable-extensions", true);
 user_pref("webgl.disable-fail-if-major-performance-caveat", true);
-user_pref("webgl.enable-webgl2", false);
 
 // Disable auto fill of username/password in form fields
 user_pref("signon.autofillForms", false);
