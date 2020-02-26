@@ -27,12 +27,9 @@ Plug 'lervag/vimtex'
 Plug 'itchyny/lightline.vim'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'rust-lang/rust.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
 call plug#end()
-
-" Deoplete lazy loading 
-autocmd InsertEnter * call deoplete#enable()
 
 " Set line numbers
 set number
@@ -54,11 +51,8 @@ noremap <expr> <right> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 
 nnoremap <expr> <left> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bp\<cr>" : "\<left>")
 
 " Set colorscheme
-set t_Co=256 termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme one
-set background=light
+set termguicolors
+colorscheme apolo
 
 " Enable backspace behavior like in most text editors
 set backspace=indent,eol,start
@@ -165,4 +159,7 @@ nnoremap Q <NOP>
 let g:livepreview_previewer = 'zathura'
 
 " Language servers
-let g:LanguageClient_serverCommands = {'c': ['ccls'], 'cpp': ['ccls', '--init={"clang": {"extraArgs": ["-std=c++17"]}}'], 'rust': ['rustup', 'run', 'stable', 'rls']}
+"let g:LanguageClient_serverCommands = {'c': ['ccls'], 'cpp': ['ccls', '--init={"clang": {"extraArgs": ["-std=c++17"]}}'], 'rust': ['rustup', 'run', 'stable', 'rls']}
+
+" Disable warnings and errors
+"let g:LanguageClient_useVirtualText = 'CodeLens'

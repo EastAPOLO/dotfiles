@@ -137,6 +137,9 @@ user_pref("dom.forms.datetime", false);
 // Prevent 3rd party tracking
 user_pref("privacy.firstparty.isolate", true);
 
+// Prevent fingerprinting
+user_pref("privacy.resistFingerprinting", true);
+
 // Disable face recognition
 user_pref("camera.control.face_detection.enabled", false);
 
