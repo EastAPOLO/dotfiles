@@ -1,0 +1,11 @@
+#!/bin/bash
+gtk3_settings="$HOME/.config/gtk-3.0/settings.ini"
+gtk_theme=$(grep -Po '(?<=gtk-theme-name=).*' ${gtk3_settings})
+gtk_icon_theme=$(grep -Po '(?<=gtk-icon-theme-name=).*' ${gtk3_settings})
+gtk_cursor_theme=$(grep -Po '(?<=gtk-cursor-theme-name=).*' ${gtk3_settings})
+gtk_font_name=$(grep -Po '(?<=gtk-font-name=).*' ${gtk3_settings})
+
+gsettings set org.gnome.desktop.interface gtk-theme "${gtk_theme}"
+gsettings set org.gnome.desktop.interface icon-theme "${gtk_icon_theme}"
+gsettings set org.gnome.desktop.interface cursor-theme "${gtk_cursor_theme}"
+gsettings set org.gnome.desktop.interface font-name "${gtk_font_name}"
