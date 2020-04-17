@@ -10,29 +10,6 @@ user_pref("browser.startup.page", 1);
 // Set homepage
 user_pref("browser.startup.homepage", "https://duckduckgo.com");
 
-// Set new tab page to blank
-user_pref("browser.newtabpage.enabled", false);
-user_pref("browser.newtab.preload", false);
-
-// Disable activity stream completely
-user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
-user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
-user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-user_pref("browser.newtabpage.activity-stream.showSearch", false);
-user_pref("browser.library.activity-stream.enabled", false);
-user_pref("browser.aboutHomeSnippets.updateUrl", "");
-
 // Disable private browsing on autostart
 user_pref("browser.privatebrowsing.autostart", false);
 
@@ -83,6 +60,16 @@ user_pref("browser.sessionstore.resume_from_crash", false);
 
 // Disable firefox accounts and sync
 user_pref("identity.fxaccounts.enabled", false);
+
+// Disable overflowing search bar
+user_pref("browser.urlbar.update1", false);
+user_pref("browser.urlbar.update1.interventions", false);
+user_pref("browser.urlbar.update1.searchTips", false);
+user_pref("browser.urlbar.openViewOnFocus", false);
+
+// Set new tab page to blank
+user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.newtab.preload", false);
 
 /* ******* */
 /* PRIVACY */
@@ -208,6 +195,25 @@ user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
 
 // Prevent websites from seeing what you do with your clipboard
 user_pref("dom.event.clipboardevents.enabled", false);
+
+// Disable activity stream completely
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
+user_pref("browser.library.activity-stream.enabled", false);
+user_pref("browser.aboutHomeSnippets.updateUrl", "");
 
 /* ******** */
 /* SECURITY */
