@@ -28,9 +28,6 @@ sudo cp -r ".config/etc/"* "/etc/"
 # Copy local dir to home dir 
 cp -r ".local/"* "$HOME/.local/"
 
-# Copy fonts to home dir
-cp -r ".fonts/"* "$HOME/.fonts/"
-
 # Copy scripts to home dir
 cp -r "scripts/" "$HOME/"
 
