@@ -17,13 +17,13 @@ user_pref("browser.privatebrowsing.autostart", false);
 /* GENERAL */
 /* ******* */
 // Set locale to OS
-user_pref("intl.locale.requested", ""); 
+user_pref("intl.locale.requested", "");
 user_pref("intl.regional_prefs.use_os_locales", true);
 
 // Enable hardware acceleration
 user_pref("layers.acceleration.force-enabled", true);
 
-// Disable Pocket, a third party cloud service 
+// Disable Pocket, a third party cloud service
 user_pref("extensions.pocket.enabled", false);
 
 // Select all text in the location bar
@@ -37,7 +37,7 @@ user_pref("browser.display.use_document_fonts", 1);
 
 // Set custom fonts
 user_pref("font.name.serif.x-unicode", "Noto Serif");
-user_pref("font.name.serif.x-western", "Noto Serif"); 
+user_pref("font.name.serif.x-western", "Noto Serif");
 user_pref("font.name.sans-serif.x-unicode", "Noto Sans");
 user_pref("font.name.sans-serif.x-western", "Noto Sans");
 user_pref("font.name.monospace.x-unicode", "Noto Mono");
@@ -92,19 +92,19 @@ user_pref("extensions.getAddons.cache.enabled", false);
 
 // Disable telemetry
 user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.enabled", false); 
+user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.server", "data:,");
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.cachedClientID", "");
-user_pref("toolkit.telemetry.newProfilePing.enabled", false); 
-user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); 
-user_pref("toolkit.telemetry.updatePing.enabled", false); 
-user_pref("toolkit.telemetry.bhrPing.enabled", false); 
+user_pref("toolkit.telemetry.newProfilePing.enabled", false);
+user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
+user_pref("toolkit.telemetry.updatePing.enabled", false);
+user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
-user_pref("toolkit.telemetry.hybridContent.enabled", false); 
+user_pref("toolkit.telemetry.hybridContent.enabled", false);
 user_pref("toolkit.telemetry.coverage.opt-out", true);
 user_pref("toolkit.coverage.endpoint.base", "");
-user_pref("toolkit.coverage.opt-out", true); 
+user_pref("toolkit.coverage.opt-out", true);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("app.normandy.enabled", false);
@@ -116,7 +116,7 @@ user_pref("beacon.enabled", false);
 // Enable privacy tracking protection
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
-user_pref("privacy.trackingprotection.pbmode.enabled", true); 
+user_pref("privacy.trackingprotection.pbmode.enabled", true);
 
 // Disable date/time picker to avoid locale leaking
 user_pref("dom.forms.datetime", false);
@@ -180,8 +180,8 @@ user_pref("privacy.cpd.cache", true);
 user_pref("privacy.cpd.formdata", true);
 user_pref("privacy.cpd.history", true);
 user_pref("privacy.cpd.offlineApps", true);
-user_pref("privacy.cpd.passwords", false); 
-user_pref("privacy.cpd.sessions", false); 
+user_pref("privacy.cpd.passwords", false);
+user_pref("privacy.cpd.sessions", false);
 
 // Limit IP leaks of WebRTC
 user_pref("media.peerconnection.ice.default_address_only", true);
@@ -189,7 +189,7 @@ user_pref("media.peerconnection.ice.no_host", true);
 
 // Disable crash reports
 user_pref("breakpad.reportURL", "");
-user_pref("browser.tabs.crashReporting.sendReport", false); 
+user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
 
