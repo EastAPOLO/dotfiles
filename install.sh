@@ -25,7 +25,7 @@ cp ".Xresources" "$HOME/"
 # Copy etc config files to /etc
 sudo cp -r ".config/etc/"* "/etc/"
 
-# Copy local dir to home dir 
+# Copy local dir to home dir
 cp -r ".local/"* "$HOME/.local/"
 
 # Copy scripts to home dir
@@ -34,7 +34,7 @@ cp -r "scripts/" "$HOME/"
 # Install my favorite programs if apt is detected on the system
 if [ -x "$(command -v apt)" ]; then
     sudo apt update && sudo apt upgrade
-    sudo apt purge nano vi 
+    sudo apt purge nano vi
     sudo apt install htop zathura libreoffice synaptic git weechat fonts-noto vim libboost-dev cmake build-essential clang llvm curl wget feh rofi ranger ttf-dejavu firefox-esr xorg i3 mpv rustc
 fi
 
@@ -42,7 +42,7 @@ fi
 if [ -x "$(command -v pacman)" ]; then
     sudo pacman -Syu
     sudo pacman -Rsn nano vi
-    sudo pacman -S --needed sway firefox neofetch htop imv zathura-pdf-mupdf weechat pulseaudio pavucontrol alsa-utils iotop zip unzip unrar p7zip rustup qt5-wayland grim slurp ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts ctags openssh cifs-utils mpv breeze-icons usbutils texlive-core texlive-fontsextra texlive-latexextra telegram-desktop keepassxc qemu xdg-user-dirs valgrind polkit-gnome nnn xf86-video-amdgpu python-pynvim
+    sudo pacman -S --needed sway firefox neofetch htop imv zathura-pdf-mupdf weechat pulseaudio pavucontrol alsa-utils iotop zip unzip unrar p7zip rustup qt5-wayland grim slurp ffmpeg alsa-plugins gvfs-smb clang llvm cmake alacritty alacritty-terminfo noto-fonts ctags openssh cifs-utils mpv breeze-icons usbutils texlive-core texlive-fontsextra texlive-latexextra telegram-desktop keepassxc qemu xdg-user-dirs valgrind polkit-gnome nnn xf86-video-amdgpu python-pynvim mako
 
     if [ -x "$(command -v git)" ]; then
         cd "$HOME"

@@ -28,25 +28,17 @@ Plug 'xuhdev/vim-latex-live-preview'
 Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
-" Deoplete lazy loading 
+" Deoplete lazy loading
 autocmd InsertEnter * call deoplete#enable()
 
 " Set line numbers
 set number
 
-" Show existing tab with 4 spaces width
-set tabstop=4
-
-" When indenting with '>', use 4 spaces width
-set shiftwidth=4
-
-" Set the number of columns for a TAB
-set softtabstop=4
-
-" On pressing tab, insert 4 spaces
-set expandtab
+" Indentation
+set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
 
 " Move between open buffers
 noremap <expr> <right> (len(filter(range(0, bufnr('$')), 'buflisted(v:val)')) > 1 ? ":bn\<cr>" : "\<right>")
@@ -62,7 +54,7 @@ colorscheme apolo
 set backspace=indent,eol,start
 
 " Set lines of history vim has to remember
-set history=500
+set history=1000
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -119,7 +111,7 @@ set undofile undodir=~/.local/share/nvim/undo/
 
 " Enable code pasting
 set pastetoggle=<F2>
- 
+
 " Set mappings
 nnoremap <F2> :TagbarToggle<CR>
 nnoremap <F3> :LLPStartPreview<CR>
@@ -135,7 +127,7 @@ else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
-" Open new file splits to the right and bottom 
+" Open new file splits to the right and bottom
 set splitright
 set splitbelow
 
