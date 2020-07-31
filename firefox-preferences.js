@@ -13,6 +13,9 @@ user_pref("browser.startup.homepage", "https://duckduckgo.com");
 // Disable private browsing on autostart
 user_pref("browser.privatebrowsing.autostart", false);
 
+// Restore previous session
+user_pref("browser.startup.page", 3);
+
 /* ******* */
 /* GENERAL */
 /* ******* */
@@ -70,6 +73,13 @@ user_pref("browser.urlbar.openViewOnFocus", false);
 // Set new tab page to blank
 user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtab.preload", false);
+
+// Why would you disable this mozilla
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
+// Hardware aceleration
+user_pref("gfx.webrender.enabled", true);
+user_pref("widget.wayland-dmabuf-vaapi.enabled", true);
 
 /* ******* */
 /* PRIVACY */

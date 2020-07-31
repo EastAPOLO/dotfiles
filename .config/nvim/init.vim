@@ -14,10 +14,8 @@ set nocompatible
 " Begin plugin initialization
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ap/vim-css-color'
-Plug 'tpope/vim-repeat'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'https://gitlab.com/EastAPOLO/apolo-vim.git'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -26,13 +24,12 @@ Plug 'lervag/vimtex'
 Plug 'itchyny/lightline.vim'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'rust-lang/rust.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-eunuch'
+Plug 'EastAPOLO/apolo-vim'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
-
-" Deoplete lazy loading
-autocmd InsertEnter * call deoplete#enable()
 
 " Set line numbers
 set number
@@ -153,6 +150,3 @@ nnoremap Q <NOP>
 
 " Set pdf viewer for latex-preview
 let g:livepreview_previewer = 'zathura'
-
-" Language servers
-let g:LanguageClient_serverCommands = {'c': ['ccls'], 'cpp': ['ccls', '--init={"clang": {"extraArgs": ["-std=c++17"]}}'], 'rust': ['rustup', 'run', 'stable', 'rls']}

@@ -6,7 +6,7 @@ fi
 PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
 # Set editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Disable Google API keys for chromium
 export GOOGLE_API_KEY="no"
@@ -30,3 +30,13 @@ export HISTSIZE=1000
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland-egl
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# Colors with ls
+export LS_COLORS="di=1;94"
+
+# Qt5 themes
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+# Java
+export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"

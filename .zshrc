@@ -36,6 +36,7 @@ alias iotop='sudo iotop'
 alias py='python3'
 alias py2='python2'
 alias dl='youtube-dl -o "%(title)s.%(ext)s"'
+alias nnn='nnn -e'
 
 # Check the weather
 weather(){ 
@@ -46,11 +47,6 @@ weather(){
 pubip(){
     curl -s ipinfo.io/ip
 }
-
-# History settings
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 
 # Set location of zshrc
 zstyle :compinstall filename '~/.zshrc'
