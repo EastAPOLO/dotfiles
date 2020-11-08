@@ -21,7 +21,6 @@ Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
-Plug 'itchyny/lightline.vim'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -148,5 +147,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 " Disable ex-mode
 nnoremap Q <NOP>
 
-" Set pdf viewer for latex-preview
+" latex settings
 let g:livepreview_previewer = 'zathura'
+let g:tex_flavor='tex'
