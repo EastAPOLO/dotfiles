@@ -37,6 +37,7 @@ alias py='python3'
 alias py2='python2'
 alias dl='youtube-dl -o "%(title)s.%(ext)s"'
 alias nnn='nnn -e'
+alias mvi='mpv --config-dir=$HOME/.config/mvi'
 
 # Check the weather
 weather(){ 

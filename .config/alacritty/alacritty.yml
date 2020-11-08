@@ -23,28 +23,28 @@ font:
 schemes:
     apolo_dark: &dark
         primary:
-            background: '#1F1F1F'
-            foreground: '#EAEAEA'
+            background: '#1f1f1f'
+            foreground: '#fafafa'
 
         normal:
             black:   '#1a1a1a'
-            red:     '#B34848'
+            red:     '#b33f3f'
             green:   '#2c9b43'
             yellow:  '#d27049'
-            blue:    '#3D85CC'
+            blue:    '#368dd9'
             magenta: '#88537b'
             cyan:    '#477b7b'
             white:   '#a4a4a4'
 
         bright:
             black:   '#1f1f1f'
-            red:     '#C75151'
+            red:     '#c75151'
             green:   '#36bf52'
             yellow:  '#e5ab57'
-            blue:    '#4596E6'
+            blue:    '#66a3d9'
             magenta: '#ba8baf'
             cyan:    '#76a0a0'
-            white:   '#eaeaea'
+            white:   '#fafafa'
 
     apolo_light: &light
         primary:

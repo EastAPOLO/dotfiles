@@ -1,8 +1,5 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+# Xorg support
+xwayland enable
 
 ### Variables
 #
@@ -17,46 +14,12 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu rofi -show run
+set $menu wofi --show drun -i
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
 #
@@ -120,9 +83,19 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     set $ws8 8
     set $ws9 9
     set $ws10 10
+    set $ws11 11
+    set $ws12 12
+    set $ws13 13
+    set $ws14 14
+    set $ws15 15
+    set $ws16 16
+    set $ws17 17
+    set $ws18 18
+    set $ws19 19
+    set $ws20 20
 
     # switch to workspace
-    bindsym $mod+1 workspace $ws1
+    bindsym $mod+1 workspace $ws1 
     bindsym $mod+2 workspace $ws2
     bindsym $mod+3 workspace $ws3
     bindsym $mod+4 workspace $ws4
@@ -132,6 +105,17 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+8 workspace $ws8
     bindsym $mod+9 workspace $ws9
     bindsym $mod+0 workspace $ws10
+    bindsym $mod+f1 workspace $ws11
+    bindsym $mod+f2 workspace $ws12
+    bindsym $mod+f3 workspace $ws13
+    bindsym $mod+f4 workspace $ws14
+    bindsym $mod+f5 workspace $ws15
+    bindsym $mod+f6 workspace $ws16
+    bindsym $mod+f7 workspace $ws17
+    bindsym $mod+f8 workspace $ws18
+    bindsym $mod+f9 workspace $ws19
+    bindsym $mod+f10 workspace $ws20
+
 
     # move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace 1
@@ -144,6 +128,16 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+8 move container to workspace 8
     bindsym $mod+Shift+9 move container to workspace 9
     bindsym $mod+Shift+0 move container to workspace 10
+    bindsym $mod+Shift+f1 move container to workspace 11
+    bindsym $mod+Shift+f2 move container to workspace 12
+    bindsym $mod+Shift+f3 move container to workspace 13
+    bindsym $mod+Shift+f4 move container to workspace 14
+    bindsym $mod+Shift+f5 move container to workspace 15
+    bindsym $mod+Shift+f6 move container to workspace 16
+    bindsym $mod+Shift+f7 move container to workspace 17
+    bindsym $mod+Shift+f8 move container to workspace 18
+    bindsym $mod+Shift+f9 move container to workspace 19
+    bindsym $mod+Shift+f10 move container to workspace 20
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -220,17 +214,45 @@ bar {
 default_border none
 
 # Mouse acceleration
-input "5426:92:Razer_Razer_DeathAdder_Elite" pointer_accel -0.9
+input "5426:92:Razer_Razer_DeathAdder_Elite" {
+    accel_profile flat
+    pointer_accel 0.1
+}
 
 # Launch applications in workspaces
-assign [class="firefox"] $ws1
+assign [app_id="firefox"] $ws1
 exec firefox
 
-assign [class="TelegramDesktop"] $ws2
+assign [app_id="telegramdesktop"] $ws2
 exec telegram-desktop
 
 assign [app_id="pavucontrol"] $ws3
 exec pavucontrol
 
-# Disable X support
-xwayland disable
+bindsym $mod+o exec grim -o HDMI-A-1 /home/stefan/pictures/output.png
+
+# Dual monitor setup
+output HDMI-A-1 pos 0 0 mode 1920x1080@75Hz
+output HDMI-A-2 pos 1920 0 mode 1920x1080@75Hz
+focus output HDMI-A-1
+
+workspace $ws1 output HDMI-A-1
+workspace $ws2 output HDMI-A-1
+workspace $ws3 output HDMI-A-1
+workspace $ws4 output HDMI-A-1
+workspace $ws5 output HDMI-A-1
+workspace $ws6 output HDMI-A-1
+workspace $ws7 output HDMI-A-1
+workspace $ws8 output HDMI-A-1
+workspace $ws9 output HDMI-A-1
+workspace $ws10 output HDMI-A-1
+workspace $ws11 output HDMI-A-2
+workspace $ws12 output HDMI-A-2
+workspace $ws13 output HDMI-A-2
+workspace $ws14 output HDMI-A-2
+workspace $ws15 output HDMI-A-2
+workspace $ws16 output HDMI-A-2
+workspace $ws17 output HDMI-A-2
+workspace $ws18 output HDMI-A-2
+workspace $ws19 output HDMI-A-2
+workspace $ws20 output HDMI-A-2

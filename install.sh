@@ -37,7 +37,7 @@ cp -r "scripts/" "$HOME/"
 
 # Install my favorite programs if pacman is detected on the system
 if [ -x "$(command -v pacman)" ]; then
-    sudo pacman -S --needed sway firefox neofetch htop imv zathura-pdf-mupdf weechat pulseaudio pavucontrol alsa-utils iotop zip unzip unrar p7zip rustup qt5ct qt5-wayland grim slurp ffmpeg alsa-plugins gvfs-smb clang llvm alacritty noto-fonts ctags openssh cifs-utils mpv breeze-icons usbutils texlive-core texlive-fontsextra texlive-latexextra telegram-desktop keepassxc qemu xdg-user-dirs valgrind polkit-gnome nnn xf86-video-amdgpu python-pynvim mako fakeroot binutils gcc gdb make go bash waybar nodejs wofi man man-pages patch jdk-openjdk jdk8-openjdk ttf-dejavu
+    sudo pacman -S --needed sway firefox neofetch htop zathura-pdf-mupdf weechat pulseaudio pavucontrol alsa-utils iotop zip unzip unrar p7zip rustup qt5ct qt5-wayland grim slurp ffmpeg alsa-plugins gvfs-smb clang llvm alacritty noto-fonts ctags openssh cifs-utils mpv breeze-icons usbutils texlive-core texlive-fontsextra texlive-latexextra telegram-desktop keepassxc virtualbox xdg-user-dirs valgrind polkit-gnome nnn xf86-video-amdgpu python-pynvim mako fakeroot binutils gcc gdb make go bash waybar nodejs wofi man man-pages patch jdk-openjdk jdk8-openjdk ttf-dejavu autoconf automake bison git vulkan-radeon libva-mesa-driver mesa-vdpau xdg-desktop-portal-wlr gcolor3 xorg-server-xwayland
 
     if [ -x "$(command -v git)" ]; then
         cd "/tmp"
@@ -62,3 +62,11 @@ sudo ln -sf "/etc/fonts/conf.avail/10-hinting-slight.conf" "/etc/fonts/conf.d"
 sudo ln -sf "/etc/fonts/conf.avail/70-no-bitmaps.conf" "/etc/fonts/conf.d"
 
 echo "Font configuration complete."
+
+# Install my favorite theme
+if [ -x "$(command -v git)" ]; then
+    cd "/tmp"
+    git clone https://github.com/EastAPOLO/apolo-dark
+    cd "/tmp/apolo-dark"
+    sudo make install
+fi
