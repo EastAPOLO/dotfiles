@@ -150,3 +150,9 @@ nnoremap Q <NOP>
 " latex settings
 let g:livepreview_previewer = 'zathura'
 let g:tex_flavor='tex'
+
+" Install coc.nvim extensions
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-clangd', 'coc-rls', 'coc-sh']
+
+" statusline
+set statusline+=%f

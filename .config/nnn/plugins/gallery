@@ -1,0 +1,15 @@
+#!/bin/bash
+
+function absolute_path {
+    case "$1" in
+        */)
+            gallery_path="$PWD/$1";;
+        *)
+            gallery_path="$PWD/$1/";;
+    esac
+}
+
+if [[ -d $1 ]]; then
+    absolute_path $1
+    exec /usr/bin/mpv --config-dir=/home/stefan/.config/miv ${gallery_path}.
+fi

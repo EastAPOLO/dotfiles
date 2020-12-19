@@ -26,10 +26,11 @@ export HISTFILE=$HOME/.histfile
 export SAVEHIST=1000
 export HISTSIZE=1000
 
-# Wayland support
+# Wayland
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland-egl
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export XDG_CURRENT_DESKTOP=sway
 
 # Colors with ls
 export LS_COLORS="di=1;94"
@@ -40,3 +41,6 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 # Java
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
+
+# NNN
+export NNN_PLUG="g:gallery;"

@@ -36,8 +36,8 @@ alias iotop='sudo iotop'
 alias py='python3'
 alias py2='python2'
 alias dl='youtube-dl -o "%(title)s.%(ext)s"'
-alias nnn='nnn -e'
-alias mvi='mpv --config-dir=$HOME/.config/mvi'
+alias nnn='nnn -de'
+alias miv='mpv --config-dir=$HOME/.config/miv'
 
 # Check the weather
 weather(){ 

@@ -30,7 +30,7 @@ schemes:
             black:   '#1a1a1a'
             red:     '#b33f3f'
             green:   '#2c9b43'
-            yellow:  '#d27049'
+            yellow:  '#c45f37'
             blue:    '#368dd9'
             magenta: '#88537b'
             cyan:    '#477b7b'
@@ -38,9 +38,9 @@ schemes:
 
         bright:
             black:   '#1f1f1f'
-            red:     '#c75151'
+            red:     '#cc6060'
             green:   '#36bf52'
-            yellow:  '#e5ab57'
+            yellow:  '#d1714b'
             blue:    '#66a3d9'
             magenta: '#ba8baf'
             cyan:    '#76a0a0'
