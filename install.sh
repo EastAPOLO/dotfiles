@@ -46,7 +46,7 @@ if [ -x "$(command -v pacman)" ]; then
         makepkg -csi
     fi
 
-    yay -S adwaita-qt pastel
+    yay -S nnn-icons
 
     # Start services
     sudo systemctl enable sshd.service && sudo systemctl start sshd.service
