@@ -37,7 +37,7 @@ cp -r "scripts/" "$HOME/"
 
 # Install my favorite programs if pacman is detected on the system
 if [ -x "$(command -v pacman)" ]; then
-    sudo pacman -S --needed sway firefox neofetch htop zathura-pdf-mupdf weechat pulseaudio pavucontrol alsa-utils iotop zip unzip unrar p7zip rustup qt5ct qt5-wayland grim slurp ffmpeg alsa-plugins gvfs-smb clang llvm alacritty noto-fonts ctags openssh cifs-utils mpv breeze-icons usbutils texlive-core texlive-fontsextra texlive-latexextra telegram-desktop keepassxc virtualbox xdg-user-dirs valgrind polkit-gnome nnn xf86-video-amdgpu python-pynvim mako fakeroot binutils gcc gdb make go bash waybar nodejs wofi man man-pages patch jdk-openjdk jdk8-openjdk ttf-dejavu autoconf automake bison git xdg-desktop-portal-wlr gcolor3 xorg-server-xwayland pkg-config youtube-dl npm
+    sudo pacman -S --needed sway firefox neofetch htop zathura-pdf-mupdf weechat pavucontrol alsa-utils iotop zip unzip unrar p7zip rustup qt5ct qt5-wayland grim slurp ffmpeg alsa-plugins gvfs-smb clang llvm alacritty noto-fonts ctags openssh cifs-utils mpv breeze-icons usbutils texlive-core texlive-fontsextra texlive-latexextra telegram-desktop keepassxc virtualbox xdg-user-dirs valgrind polkit-gnome nnn xf86-video-amdgpu python-pynvim mako fakeroot binutils gcc gdb make go bash waybar nodejs wofi man man-pages patch jdk-openjdk jdk8-openjdk ttf-dejavu autoconf automake bison git xdg-desktop-portal-wlr gcolor3 xorg-server-xwayland pkg-config youtube-dl npm
 
     if [ -x "$(command -v git)" ]; then
         cd "/tmp"
@@ -46,7 +46,7 @@ if [ -x "$(command -v pacman)" ]; then
         makepkg -csi
     fi
 
-    yay -S nnn-icons
+    yay -S nnn-icons pipewire-git pipewire-alsa-git pipewire-pulse-git kepubify-bin
 
     # Start services
     sudo systemctl enable sshd.service && sudo systemctl start sshd.service
