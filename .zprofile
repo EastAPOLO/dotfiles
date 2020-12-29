@@ -45,3 +45,6 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
 
 # NNN
 export NNN_PLUG="g:gallery;"
+
+# Steam
+export STEAM_RUNTIME=0
