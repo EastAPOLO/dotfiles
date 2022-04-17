@@ -27,6 +27,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-eunuch'
 Plug 'EastAPOLO/apolo-vim'
+Plug 'https://github.com/chrisduerr/vim-undead.git'
 Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
@@ -73,10 +74,9 @@ set incsearch
 " Highlight search results in command mode
 set hlsearch
 
+" Disable Background Color Erase so that color schemes
+" render properly when inside 256-color tmux and GNU screen
 if &term =~ '256color'
-    " disable Background Color Erase (BCE) so that color schemes
-    " render properly when inside 256-color tmux and GNU screen.
-    " see also http://sunaku.github.io/vim-256color-bce.html
     set t_ut=
 endif
 
@@ -135,11 +135,8 @@ let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-k>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
-" Git Gutter
+" Git gutter
 set updatetime=1000
-
-" Set lightline colorscheme
-let g:lightline = {'colorscheme': 'PaperColor'}
 
 " Set python3 executable
 let g:python3_host_prog = '/usr/bin/python3'
@@ -147,12 +144,15 @@ let g:python3_host_prog = '/usr/bin/python3'
 " Disable ex-mode
 nnoremap Q <NOP>
 
-" latex settings
+" Latex settings
 let g:livepreview_previewer = 'zathura'
 let g:tex_flavor='tex'
 
 " Install coc.nvim extensions
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-clangd', 'coc-rls', 'coc-sh']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-clangd', 'coc-rls', 'coc-sh', 'coc-pyright']
 
-" statusline
+" Statusline
 set statusline+=%f
+
+" Work around resize bug
+autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
