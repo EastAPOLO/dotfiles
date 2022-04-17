@@ -2,26 +2,26 @@ startup_mode: Fullscreen
 
 font:
     normal:
-        family: Noto Sans Mono
+        family: Fira Mono
         style: Regular
 
     bold:
-        family: Noto Sans Mono
+        family: Fira Mono
         style: Bold
 
     italic:
-        family: Noto Sans Mono
+        family: Fira Mono
         style: Italic
 
     bold_italic:
-        family: Noto Sans Mono
+        family: Fira Mono
         style: Bold Italic
 
     size: 12.0
 
 
 schemes:
-    apolo_dark: &dark
+    apolo_dark: &apolo_dark
         primary:
             background: '#1f1f1f'
             foreground: '#fafafa'
@@ -39,14 +39,14 @@ schemes:
         bright:
             black:   '#1f1f1f'
             red:     '#cc6060'
-            green:   '#36bf52'
+            green:   '#3CA064'
             yellow:  '#d1714b'
-            blue:    '#66a3d9'
+            blue:    '#669BC8'
             magenta: '#ba8baf'
             cyan:    '#76a0a0'
             white:   '#fafafa'
 
-    apolo_light: &light
+    apolo_light: &apolo_light
         primary:
             background: '#ededed'
             foreground: '#2a2a2a'
@@ -71,7 +71,32 @@ schemes:
             cyan:    '#3e999f'
             white:   '#1d1f21'
 
-colors: *dark
+    undead_dark: &undead_dark
+        primary:
+            foreground: "0xaaaaaa"
+            background: "0x181818"
+
+        normal:
+            black:   "0x181818"
+            red:     "0xac4242"
+            green:   "0x90a959"
+            yellow:  "0xf4bf75"
+            blue:    "0x6a9fb5"
+            magenta: "0xaa759f"
+            cyan:    "0x75b5aa"
+            white:   "0x666666"
+
+        bright:
+            black:   "0x282828"
+            red:     "0x752a2a"
+            green:   "0x5d742a"
+            yellow:  "0x754e2a"
+            blue:    "0x2a4e74"
+            magenta: "0x703664"
+            cyan:    "0x297366"
+            white:   "0xaaaaaa"
+
+colors: *apolo_dark
 
 cursor:
     style: Beam

@@ -11,10 +11,10 @@ set $up k
 set $right l
 
 # Terminal
-set $term alacritty
+set $term foot
 
 # Launcher
-set $menu wofi --show drun -i
+set $menu wofi --show run -i
 
 # Default wallpaper
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
@@ -200,7 +200,7 @@ default_border none
 assign [app_id="firefox"] $ws1
 exec firefox
 
-assign [app_id="telegramdesktop"] $ws2
+assign [app_id="appimagekit_3a48058ef277d45ae2228089429c0259-Telegram_Desktop"] $ws2
 exec telegram-desktop
 
 assign [app_id="pavucontrol"] $ws3
@@ -233,3 +233,6 @@ workspace $ws17 output HDMI-A-2
 workspace $ws18 output HDMI-A-2
 workspace $ws19 output HDMI-A-2
 workspace $ws20 output HDMI-A-2
+
+# Polkit agent
+exec /usr/libexec/polkit-gnome-authentication-agent-1 &
