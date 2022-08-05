@@ -1,0 +1,6 @@
+{
+    "pyright.disableProgressNotifications" : true,
+    "clangd.disableProgressNotifications" : true
+}
+
+

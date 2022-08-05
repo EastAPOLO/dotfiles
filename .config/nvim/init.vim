@@ -11,24 +11,46 @@ endif
 " Vi compatibility is a joke
 set nocompatible
 
-" Begin plugin initialization
 call plug#begin('~/.local/share/nvim/plugged')
+" A very fast, multi-syntax context-sensitive color name highlighter
 Plug 'ap/vim-css-color'
+
+" The ultimate snippet solution
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'airblade/vim-gitgutter'
+
+" Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar'
-Plug 'octol/vim-cpp-enhanced-highlight'
+
+" Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
-Plug 'lervag/vimtex'
-Plug 'xuhdev/vim-latex-live-preview'
-Plug 'rust-lang/rust.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Lively Previewing LaTeX PDF Output 
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+" Better whitespace highlighting
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-eunuch'
+
+" My personal dark theme
 Plug 'EastAPOLO/apolo-vim'
+
+" UndeadLeech's dark theme
 Plug 'https://github.com/chrisduerr/vim-undead.git'
+
+" Maintains consistent coding styles for any project
 Plug 'editorconfig/editorconfig-vim'
+
+" Smooth scrolling for Vim done right
+Plug 'psliwka/vim-smoothie'
+
+" Load extensions like VSCode and host language servers
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" A collection of language packs
+Plug 'sheerun/vim-polyglot'
+
+" The undo history visualizer
+Plug 'mbbill/undotree'
 call plug#end()
 
 " Set line numbers
@@ -106,15 +128,16 @@ set clipboard=unnamedplus
 set undofile undodir=~/.local/share/nvim/undo/
 
 " Enable code pasting
-set pastetoggle=<F2>
+set pastetoggle=<F4>
 
 " Set mappings
 nnoremap <F2> :TagbarToggle<CR>
 nnoremap <F3> :LLPStartPreview<CR>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <F4> :UndotreeToggle<CR>
+nnoremap <C-J> <C-W>+
+nnoremap <C-K> <C-W>-
+nnoremap <C-L> <C-W>>
+nnoremap <C-H> <C-W><
 
 " Set 80 character limit line
 if exists('+colorcolumn')
@@ -131,12 +154,9 @@ set splitbelow
 set viminfo='100,<1000,s100,h
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<C-j>"
-let g:UltiSnipsJumpForwardTrigger="<C-k>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-
-" Git gutter
-set updatetime=1000
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Set python3 executable
 let g:python3_host_prog = '/usr/bin/python3'
@@ -148,11 +168,11 @@ nnoremap Q <NOP>
 let g:livepreview_previewer = 'zathura'
 let g:tex_flavor='tex'
 
-" Install coc.nvim extensions
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-clangd', 'coc-rls', 'coc-sh', 'coc-pyright']
-
 " Statusline
 set statusline+=%f
 
 " Work around resize bug
 autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
+
+" Install coc.nvim extensions
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-css', 'coc-clangd', 'coc-rls', 'coc-sh', 'coc-pyright']
